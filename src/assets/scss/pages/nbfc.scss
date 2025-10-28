@@ -1,0 +1,570 @@
+// Hero Section
+.nbfc-hero-banner {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 50px 0;
+}
+
+.nbfc-hero-badge {
+  font-size: 14px;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 20px;
+}
+
+.nbfc-hero-title {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.nbfc-hero-subtitle {
+  font-size: 24px;
+  font-weight: 300;
+  margin-bottom: 30px;
+}
+
+.nbfc-hero-description {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+// Features Grid
+.nbfc-features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.nbfc-feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+}
+
+.nbfc-feature-icon {
+  color: #bf5b01;
+  flex-shrink: 0;
+}
+
+.nbfc-feature-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #ffffff;
+}
+
+.nbfc-feature-desc {
+  font-size: 14px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 0;
+}
+
+// Buttons
+.nbfc-btn {
+  padding: 12px 30px;
+  border-radius: 8px;
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  border: none;
+  font-size: 16px;
+}
+
+.nbfc-btn-primary {
+  background-color: #2b6aa1;
+  color: #ffffff;
+}
+
+.nbfc-btn-primary:hover {
+  background-color: #1f4f7a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(43, 106, 161, 0.3);
+  color: #ffffff;
+}
+
+.nbfc-btn-secondary {
+  background-color: #bf5b01;
+  color: #ffffff;
+}
+
+.nbfc-btn-secondary:hover {
+  background-color: #994800;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(191, 91, 1, 0.3);
+  color: #ffffff;
+}
+
+.nbfc-btn-light {
+  background-color: #ffffff;
+  color: #2b6aa1;
+  font-weight: 600;
+}
+
+.nbfc-btn-light:hover {
+  background-color: #f8f9fa;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+  color: #2b6aa1;
+}
+
+.nbfc-btn-outline {
+  background-color: transparent;
+  border: 2px solid #2b6aa1;
+  color: #2b6aa1;
+}
+
+.nbfc-btn-outline:hover {
+  background-color: #2b6aa1;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.nbfc-btn-outline-light {
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+}
+
+.nbfc-btn-outline-light:hover {
+  background-color: #ffffff;
+  color: #2b6aa1;
+}
+
+// Sections
+.nbfc-section {
+  padding: 80px 0;
+}
+
+.nbfc-section-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #2b6aa1;
+  margin-bottom: 20px;
+}
+
+.nbfc-section-subtitle {
+  font-size: 18px;
+  font-weight: 300;
+  color: #666666;
+  line-height: 1.6;
+}
+
+// Benefits List
+.nbfc-benefits-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.nbfc-benefit-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #2b6aa1;
+}
+
+.nbfc-benefit-icon {
+  color: #bf5b01;
+  flex-shrink: 0;
+}
+
+// Benefit Cards
+.nbfc-benefit-card {
+  transition: all 0.3s ease;
+  border-radius: 12px;
+}
+
+.nbfc-benefit-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.nbfc-benefit-icon-wrapper {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #2b6aa1, #1f4f7a);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.nbfc-benefit-icon {
+  color: #ffffff;
+}
+
+.nbfc-benefit-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #2b6aa1;
+}
+
+.nbfc-benefit-description {
+  font-size: 14px;
+  font-weight: 300;
+  color: #666666;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+// Cards
+.nbfc-card-img {
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.nbfc-card {
+  transition: all 0.3s ease;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.nbfc-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.nbfc-card:hover .nbfc-card-img {
+  transform: scale(1.05);
+}
+
+.nbfc-amount {
+  font-size: 24px;
+  font-weight: 700;
+  color: #bf5b01;
+}
+
+.nbfc-amount-sm {
+  font-size: 18px;
+  font-weight: 700;
+  color: #bf5b01;
+  margin-bottom: 10px;
+}
+
+.nbfc-badge {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 6px;
+}
+
+.nbfc-card-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #2b6aa1;
+  line-height: 1.4;
+}
+
+.nbfc-card-description {
+  font-size: 14px;
+  font-weight: 300;
+  color: #666666;
+  line-height: 1.6;
+}
+
+// Loan Details
+.nbfc-loan-details {
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  border-left: 4px solid #bf5b01;
+}
+
+.nbfc-tenure {
+  font-size: 14px;
+  font-weight: 500;
+  color: #2b6aa1;
+}
+
+// Features Tags
+.nbfc-features-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.nbfc-feature-tag {
+  background-color: #f8f9fa;
+  color: #2b6aa1;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  border: 1px solid #e9ecef;
+}
+
+// Special Cards
+.nbfc-special-card {
+  transition: all 0.3s ease;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.nbfc-special-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.nbfc-category-badge {
+  background-color: transparent;
+  border: 2px solid #2b6aa1;
+  color: #2b6aa1 !important;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 6px;
+}
+
+// Eligibility Cards
+.nbfc-eligibility-card {
+  transition: all 0.3s ease;
+  border-radius: 12px;
+}
+
+.nbfc-eligibility-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.nbfc-eligibility-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #2b6aa1;
+}
+
+.nbfc-eligibility-requirement {
+  font-size: 20px;
+  font-weight: 700;
+  color: #bf5b01;
+}
+
+.nbfc-eligibility-description {
+  font-size: 14px;
+  font-weight: 300;
+  color: #666666;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+// Document Lists
+.nbfc-doc-list-box {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.nbfc-subsection-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #2b6aa1;
+  margin-bottom: 20px;
+}
+
+.nbfc-doc-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nbfc-doc-list li {
+  position: relative;
+  padding-left: 25px;
+  font-size: 16px;
+  font-weight: 300;
+  color: #666666;
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.nbfc-doc-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #bf5b01;
+  font-weight: 600;
+}
+
+// FAQ Tabs
+.nbfc-faq-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.nbfc-faq-tab {
+  background-color: #f8f9fa;
+  border: 2px solid #e9ecef;
+  color: #666666;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.nbfc-faq-tab:hover,
+.nbfc-faq-tab.active {
+  background-color: #2b6aa1;
+  border-color: #2b6aa1;
+  color: #ffffff;
+}
+
+// Accordion
+.nbfc-accordion-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.nbfc-accordion-item {
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+
+.nbfc-accordion-header {
+  background-color: #f8f9fa;
+  border: none;
+  padding: 20px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #2b6aa1;
+}
+
+.nbfc-accordion-header:not(.collapsed) {
+  background-color: #2b6aa1;
+  color: #ffffff;
+}
+
+.nbfc-accordion-body {
+  background-color: #ffffff;
+  padding: 20px;
+  font-size: 14px;
+  font-weight: 300;
+  color: #666666;
+  line-height: 1.6;
+}
+
+// CTA Section
+.nbfc-cta-title {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.nbfc-cta-subtitle {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+// Illustration
+.nbfc-illustration-img {
+  width: 100%;
+  height: auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+// Utility Classes
+.min-vh-80 {
+  min-height: 80vh;
+}
+
+.text-white {
+  color: #ffffff;
+}
+
+.bg-light {
+  background-color: #f8f9fa;
+}
+
+.bg-primary {
+  background-color: #2b6aa1 !important;
+}
+
+.nbfc-cta-section {
+  background-color: #29665b;
+  padding: 60px 0;
+}
+// Responsive Design
+@media (max-width: 768px) {
+  .nbfc-hero-title {
+    font-size: 32px;
+  }
+  
+  .nbfc-hero-subtitle {
+    font-size: 20px;
+  }
+  
+  .nbfc-section-title {
+    font-size: 28px;
+  }
+  
+  .nbfc-cta-title {
+    font-size: 24px;
+  }
+  
+  .nbfc-features-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .nbfc-faq-tabs {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .nbfc-faq-tab {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 576px) {
+  .nbfc-hero-banner {
+    padding: 80px 0;
+  }
+  
+  .nbfc-hero-title {
+    font-size: 28px;
+  }
+  
+  .nbfc-section-title {
+    font-size: 24px;
+  }
+  
+  .nbfc-accordion-header {
+    padding: 15px;
+    font-size: 14px;
+  }
+  
+  .nbfc-accordion-body {
+    padding: 15px;
+  }
+  
+  .nbfc-cta-buttons .nbfc-btn {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+}

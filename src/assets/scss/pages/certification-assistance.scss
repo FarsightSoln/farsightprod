@@ -1,0 +1,182 @@
+// Hero Section
+.ca-hero-banner {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 40px 0;
+  max-height: 70vh;
+}
+
+.ca-hero-title {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.ca-hero-subtitle {
+  font-size: 24px;
+  font-weight: 300;
+  margin-bottom: 30px;
+}
+
+.ca-hero-description {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+// Buttons
+.ca-btn {
+  padding: 12px 30px;
+  border-radius: 8px;
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+  border: none;
+  font-size: 16px;
+}
+
+.ca-btn-primary {
+  background-color: #2b6aa1;
+  color: #ffffff;
+}
+
+.ca-btn-primary:hover {
+  background-color: #1f4f7a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(43, 106, 161, 0.3);
+  color: #ffffff;
+}
+
+.ca-btn-secondary {
+  background-color: #bf5b01;
+  color: #ffffff;
+}
+
+.ca-btn-secondary:hover {
+  background-color: #994800;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(191, 91, 1, 0.3);
+  color: #ffffff;
+}
+
+// Sections
+.ca-section {
+  padding: 80px 0;
+}
+
+.ca-section-header {
+  margin-bottom: 60px;
+}
+
+.ca-section-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #2b6aa1;
+  margin-bottom: 20px;
+}
+
+.ca-section-subtitle {
+  font-size: 18px;
+  font-weight: 300;
+  color: #666666;
+  line-height: 1.6;
+}
+
+.ca-highlight {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 20px;
+  border-radius: 6px;
+}
+
+.ca-highlight-badge {
+  color: #bf5b01;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.ca-highlight-text {
+  font-size: 16px;
+  font-weight: 500;
+  color: #2b6aa1;
+}
+
+// Cards
+.ca-feature-card {
+  transition: all 0.3s ease;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.ca-feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.ca-card-img {
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.ca-feature-card:hover .ca-card-img {
+  transform: scale(1.05);
+}
+
+.ca-feature-icon {
+  color: #2b6aa1;
+  margin-bottom: 20px;
+}
+
+.ca-feature-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #2b6aa1;
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+.ca-feature-description {
+  font-size: 14px;
+  font-weight: 300;
+  color: #666666;
+  line-height: 1.6;
+}
+
+// Utility Classes
+.min-vh-80 {
+  min-height: 80vh;
+}
+
+.text-white {
+  color: #ffffff;
+}
+
+.bg-light {
+  background-color: #f8f9fa;
+}
+
+// Responsive
+@media (max-width: 768px) {
+  .ca-hero-title {
+    font-size: 32px;
+  }
+  
+  .ca-hero-subtitle {
+    font-size: 20px;
+  }
+  
+  .ca-section-title {
+    font-size: 28px;
+  }
+  
+  .ca-hero-buttons .ca-btn {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+}

@@ -1,0 +1,468 @@
+/* Customer Support Page Styles */
+.funding-assistance-page {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Hero Section */
+.funding-assistance-hero {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #282929 0%, #39393a 100%);
+  color: white;
+  overflow: hidden;
+}
+
+.funding-assistance-hero-content {
+  padding: 20px 0;
+}
+
+.funding-assistance-hero-title {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.funding-assistance-hero-description {
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 0;
+  opacity: 0.9;
+}
+
+.funding-assistance-hero-image {
+  text-align: center;
+  position: relative;
+}
+
+.funding-assistance-hero-img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.funding-assistance-hero-img:hover {
+  transform: translateY(-10px);
+}
+
+/* Statistics Section */
+.funding-assistance-stats {
+  padding: 60px 0;
+  background-color: #f8f9fa;
+}
+
+.funding-assistance-stat-item {
+  padding: 30px 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  height: 100%;
+}
+
+.funding-assistance-stat-item:hover {
+  transform: translateY(-5px);
+}
+
+.funding-assistance-stat-icon {
+  margin-bottom: 20px;
+}
+
+.funding-assistance-stat-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.funding-assistance-stat-number {
+  font-size: 36px;
+  font-weight: 700;
+  color: #667eea;
+  margin-bottom: 10px;
+}
+
+.funding-assistance-stat-text {
+  font-size: 14px;
+  font-weight: 600;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Main Content Section */
+.funding-assistance-main {
+  padding: 80px 0;
+  background-color: white;
+}
+
+.funding-assistance-sidebar {
+  position: sticky;
+  top: 20px;
+}
+
+/* Services Section */
+.funding-assistance-services {
+  margin-bottom: 60px;
+}
+
+.funding-assistance-services-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.funding-assistance-services-subtitle {
+  font-size: 14px;
+  font-weight: 600;
+  color: #667eea;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.funding-assistance-services-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 20px;
+  line-height: 1.3;
+}
+
+.funding-assistance-services-description {
+  font-size: 16px;
+  color: #666;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.funding-assistance-service-card {
+  border: none;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.funding-assistance-service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.funding-assistance-service-card .card-img-top {
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.funding-assistance-service-card:hover .card-img-top {
+  transform: scale(1.05);
+}
+
+.funding-assistance-service-card .card-body {
+  padding: 25px;
+}
+
+.funding-assistance-service-name {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.funding-assistance-service-text {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+/* Benefits Section */
+.funding-assistance-benefits {
+  margin-top: 60px;
+}
+
+.funding-assistance-benefits-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.funding-assistance-benefits-subtitle {
+  font-size: 14px;
+  font-weight: 600;
+  color: #667eea;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.funding-assistance-benefits-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 0;
+  line-height: 1.3;
+}
+
+.funding-assistance-benefit-item {
+  display: flex;
+  align-items: flex-start;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  height: 100%;
+}
+
+.funding-assistance-benefit-item:hover {
+  transform: translateY(-3px);
+}
+
+.funding-assistance-benefit-icon {
+  margin-right: 20px;
+  flex-shrink: 0;
+}
+
+.funding-assistance-benefit-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.funding-assistance-benefit-content {
+  flex: 1;
+}
+
+.funding-assistance-benefit-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.funding-assistance-benefit-text {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+/* Why Choose Section */
+.funding-assistance-choose {
+  padding: 80px 0;
+  background-color: #f8f9fa;
+}
+
+.funding-assistance-choose-image {
+  position: relative;
+  text-align: center;
+}
+
+.funding-assistance-choose-img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.funding-assistance-choose-badge {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.funding-assistance-choose-years {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 5px;
+}
+
+.funding-assistance-choose-experience {
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.funding-assistance-choose-content {
+  padding: 40px 0;
+}
+
+.funding-assistance-choose-subtitle {
+  font-size: 14px;
+  font-weight: 600;
+  color: #667eea;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.funding-assistance-choose-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 20px;
+  line-height: 1.3;
+}
+
+.funding-assistance-choose-description {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 30px;
+  line-height: 1.7;
+}
+
+.funding-assistance-choose-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.funding-assistance-choose-item {
+  padding: 10px 0;
+  padding-left: 30px;
+  position: relative;
+  font-size: 15px;
+  color: #333;
+  line-height: 1.6;
+}
+
+.funding-assistance-choose-item:before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  top: 10px;
+  color: #28a745;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* FAQ Section */
+.funding-assistance-faq {
+  padding: 80px 0;
+  background-color: white;
+}
+
+.funding-assistance-faq-header {
+  margin-bottom: 50px;
+}
+
+.funding-assistance-faq-subtitle {
+  font-size: 14px;
+  font-weight: 600;
+  color: #667eea;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.funding-assistance-faq-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 20px;
+  line-height: 1.3;
+}
+
+.funding-assistance-faq-description {
+  font-size: 16px;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .funding-assistance-hero-title {
+    font-size: 36px;
+  }
+  
+  .funding-assistance-services-title,
+  .funding-assistance-choose-title,
+  .funding-assistance-faq-title {
+    font-size: 28px;
+  }
+  
+  .funding-assistance-choose-content {
+    padding: 20px 0;
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .funding-assistance-hero {
+    padding: 60px 0;
+  }
+  
+  .funding-assistance-hero-title {
+    font-size: 28px;
+  }
+  
+  .funding-assistance-hero-description {
+    font-size: 16px;
+  }
+  
+  .funding-assistance-main {
+    padding: 60px 0;
+  }
+  
+  .funding-assistance-choose {
+    padding: 60px 0;
+  }
+  
+  .funding-assistance-faq {
+    padding: 60px 0;
+  }
+  
+  .funding-assistance-benefit-item {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .funding-assistance-benefit-icon {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .funding-assistance-hero-title {
+    font-size: 24px;
+  }
+  
+  .funding-assistance-services-title,
+  .funding-assistance-choose-title,
+  .funding-assistance-faq-title {
+    font-size: 24px;
+  }
+  
+  .funding-assistance-stat-number {
+    font-size: 28px;
+  }
+  
+  .funding-assistance-choose-badge {
+    position: static;
+    margin-top: 20px;
+    display: inline-block;
+  }
+}

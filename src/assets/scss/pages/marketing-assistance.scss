@@ -1,0 +1,336 @@
+// Hero Section
+.ma-hero-banner {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 50px 0;
+  max-height: 70vh;
+}
+
+.ma-hero-title {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.ma-hero-subtitle {
+  font-size: 24px;
+  font-weight: 300;
+  margin-bottom: 30px;
+}
+
+.ma-hero-description {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+// Feature Badges
+.ma-feature-badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.ma-feature-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px 20px;
+  border-radius: 25px;
+  backdrop-filter: blur(10px);
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.ma-feature-icon {
+  color: #bf5b01;
+}
+
+// Buttons
+.ma-btn {
+  padding: 12px 30px;
+  border-radius: 8px;
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+  border: none;
+  font-size: 16px;
+}
+
+.ma-btn-primary {
+  background-color: #2b6aa1;
+  color: #ffffff;
+}
+
+.ma-btn-primary:hover {
+  background-color: #1f4f7a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(43, 106, 161, 0.3);
+  color: #ffffff;
+}
+
+.ma-btn-secondary {
+  background-color: #bf5b01;
+  color: #ffffff;
+}
+
+.ma-btn-secondary:hover {
+  background-color: #994800;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(191, 91, 1, 0.3);
+  color: #ffffff;
+}
+
+.ma-btn-expansion {
+  background-color: #ffffff;
+  color: #2b6aa1;
+  border: 2px solid #2b6aa1;
+  font-weight: 600;
+}
+
+.ma-btn-expansion:hover {
+  background-color: #2b6aa1;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+// Sections
+.ma-section {
+  padding: 80px 0;
+}
+
+.ma-section-header {
+  margin-bottom: 60px;
+}
+
+.ma-section-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #2b6aa1;
+  margin-bottom: 20px;
+}
+
+.ma-section-subtitle {
+  font-size: 18px;
+  font-weight: 300;
+  color: #666666;
+  line-height: 1.6;
+}
+
+.ma-accent-text {
+  color: #bf5b01;
+  font-weight: 500;
+}
+
+// Left Content
+.ma-left-content {
+  position: sticky;
+  top: 20px;
+}
+
+.ma-number {
+  font-size: 72px;
+  font-weight: 700;
+  color: #2b6aa1;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.ma-service-title {
+  font-size: 28px;
+  font-weight: 600;
+  color: #2b6aa1;
+  margin-bottom: 15px;
+}
+
+.ma-title-underline {
+  width: 60px;
+  height: 3px;
+  background-color: #bf5b01;
+  margin-bottom: 20px;
+}
+
+.ma-service-description {
+  font-size: 20px;
+  font-weight: 500;
+  color: #bf5b01;
+  margin-bottom: 20px;
+}
+
+.ma-service-text {
+  font-size: 16px;
+  font-weight: 300;
+  color: #666666;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+// Confused Box
+.ma-confused-box {
+  background-color: #f8f9fa;
+  padding: 25px;
+  border-radius: 12px;
+  border-left: 4px solid #bf5b01;
+}
+
+.ma-confused-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #2b6aa1;
+  margin-bottom: 10px;
+}
+
+.ma-confused-text {
+  font-size: 14px;
+  font-weight: 300;
+  color: #666666;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+// Cards
+.ma-card-img {
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.ma-service-card {
+  transition: all 0.3s ease;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.ma-service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.ma-service-card:hover .ma-card-img {
+  transform: scale(1.05);
+}
+
+.ma-service-icon {
+  color: #2b6aa1;
+}
+
+.ma-service-card-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #2b6aa1;
+  line-height: 1.4;
+}
+
+.ma-service-card-description {
+  font-size: 14px;
+  font-weight: 300;
+  color: #666666;
+  line-height: 1.6;
+}
+
+// CRM Card
+.ma-crm-card {
+  transition: all 0.3s ease;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.ma-crm-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.ma-crm-card:hover .ma-card-img {
+  transform: scale(1.05);
+}
+
+.ma-crm-icon {
+  color: #bf5b01;
+}
+
+.ma-crm-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #2b6aa1;
+  line-height: 1.4;
+}
+
+.ma-crm-description {
+  font-size: 16px;
+  font-weight: 300;
+  color: #666666;
+  line-height: 1.6;
+}
+
+// Utility Classes
+.min-vh-80 {
+  min-height: 80vh;
+}
+
+.text-white {
+  color: #ffffff;
+}
+
+.bg-light {
+  background-color: #f8f9fa;
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+  .ma-hero-title {
+    font-size: 32px;
+  }
+  
+  .ma-hero-subtitle {
+    font-size: 20px;
+  }
+  
+  .ma-section-title {
+    font-size: 28px;
+  }
+  
+  .ma-number {
+    font-size: 48px;
+  }
+  
+  .ma-service-title {
+    font-size: 24px;
+  }
+  
+  .ma-feature-badges {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .ma-hero-buttons .ma-btn {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .ma-hero-banner {
+    padding: 80px 0;
+  }
+  
+  .ma-hero-title {
+    font-size: 28px;
+  }
+  
+  .ma-section-title {
+    font-size: 24px;
+  }
+  
+  .ma-left-content {
+    position: static;
+    margin-bottom: 30px;
+  }
+}

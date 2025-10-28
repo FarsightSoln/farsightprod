@@ -1,0 +1,280 @@
+// Hero Section
+.ab-hero-banner {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 50px 0;
+}
+
+.ab-hero-title {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.ab-hero-subtitle {
+  font-size: 24px;
+  font-weight: 300;
+  margin-bottom: 30px;
+}
+
+.ab-hero-description {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+// Buttons
+.ab-btn {
+  padding: 12px 30px;
+  border-radius: 8px;
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+  border: none;
+  font-size: 16px;
+}
+
+.ab-btn-primary {
+  background-color: #2b6aa1;
+  color: #ffffff;
+}
+
+.ab-btn-primary:hover {
+  background-color: #1f4f7a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(43, 106, 161, 0.3);
+  color: #ffffff;
+}
+
+.ab-btn-secondary {
+  background-color: #bf5b01;
+  color: #ffffff;
+}
+
+.ab-btn-secondary:hover {
+  background-color: #994800;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(191, 91, 1, 0.3);
+  color: #ffffff;
+}
+
+// Tab Section
+.ab-tabs-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #2b6aa1;
+  margin-bottom: 20px;
+}
+
+.ab-tabs-subtitle {
+  font-size: 18px;
+  font-weight: 300;
+  color: #666666;
+  line-height: 1.6;
+}
+
+.ab-tab-btn {
+  background-color: #f8f9fa;
+  border: 2px solid #e9ecef;
+  color: #666666;
+  padding: 20px 15px;
+  border-radius: 12px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.ab-tab-btn:hover {
+  background-color: #e9ecef;
+  border-color: #2b6aa1;
+  color: #2b6aa1;
+  transform: translateY(-2px);
+}
+
+.ab-tab-active {
+  background-color: #2b6aa1;
+  border-color: #2b6aa1;
+  color: #ffffff;
+}
+
+.ab-tab-number {
+  font-size: 14px;
+  font-weight: 600;
+  opacity: 0.8;
+}
+
+.ab-tab-label {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+// Content Section
+.ab-content-left {
+  position: sticky;
+  top: 20px;
+}
+
+.ab-content-number {
+  font-size: 72px;
+  font-weight: 700;
+  color: #2b6aa1;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.ab-content-title {
+  font-size: 32px;
+  font-weight: 600;
+  color: #2b6aa1;
+  margin-bottom: 15px;
+}
+
+.ab-content-subtitle {
+  font-size: 20px;
+  font-weight: 500;
+  color: #bf5b01;
+  margin-bottom: 20px;
+}
+
+.ab-content-description {
+  font-size: 16px;
+  font-weight: 300;
+  color: #666666;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+// Confused Box
+.ab-confused-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #2b6aa1;
+  margin-bottom: 10px;
+}
+
+.ab-confused-text {
+  font-size: 14px;
+  font-weight: 300;
+  color: #666666;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+// Service Cards
+.ab-card-img {
+  height: 180px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.ab-service-card {
+  transition: all 0.3s ease;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.ab-service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.ab-service-card:hover .ab-card-img {
+  transform: scale(1.05);
+}
+
+.ab-service-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #2b6aa1;
+  line-height: 1.4;
+}
+
+.ab-service-description {
+  font-size: 14px;
+  font-weight: 300;
+  color: #666666;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+.ab-cta-btn {
+  padding: 15px 30px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+// Utility Classes
+.min-vh-80 {
+  min-height: 80vh;
+}
+
+.text-white {
+  color: #ffffff;
+}
+
+.bg-light {
+  background-color: #f8f9fa;
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+  .ab-hero-title {
+    font-size: 32px;
+  }
+  
+  .ab-hero-subtitle {
+    font-size: 20px;
+  }
+  
+  .ab-tabs-title {
+    font-size: 28px;
+  }
+  
+  .ab-content-number {
+    font-size: 48px;
+  }
+  
+  .ab-content-title {
+    font-size: 24px;
+  }
+  
+  .ab-hero-buttons .ab-btn {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .ab-hero-banner {
+    padding: 80px 0;
+  }
+  
+  .ab-hero-title {
+    font-size: 28px;
+  }
+  
+  .ab-tabs-title {
+    font-size: 24px;
+  }
+  
+  .ab-content-left {
+    position: static;
+    margin-bottom: 30px;
+  }
+  
+  .ab-tab-btn {
+    padding: 15px 10px;
+  }
+  
+  .ab-tab-label {
+    font-size: 14px;
+  }
+}

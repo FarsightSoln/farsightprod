@@ -1,0 +1,225 @@
+// Hero Section
+.la-hero-banner {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 50px 0;
+}
+
+.la-hero-title {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.la-hero-desc {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+// Buttons
+.la-btn-primary {
+  background-color: #2b6aa1;
+  border-color: #2b6aa1;
+  color: #ffffff;
+  padding: 12px 30px;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.la-btn-primary:hover {
+  background-color: #1f4f7a;
+  border-color: #1f4f7a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(43, 106, 161, 0.3);
+  color: #ffffff;
+}
+
+.la-btn-secondary {
+  background-color: #bf5b01;
+  border-color: #bf5b01;
+  color: #ffffff;
+  padding: 12px 30px;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.la-btn-secondary:hover {
+  background-color: #994800;
+  border-color: #994800;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(191, 91, 1, 0.3);
+  color: #ffffff;
+}
+
+// Sections
+.la-section-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #2b6aa1;
+  margin-bottom: 20px;
+}
+
+.la-section-subtitle {
+  font-size: 18px;
+  font-weight: 300;
+  color: #666666;
+  line-height: 1.6;
+}
+
+.la-highlight-text {
+  font-size: 16px;
+  font-weight: 500;
+  color: #2b6aa1;
+}
+
+// Cards
+.la-card-img {
+  height: 180px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.la-benefit-card,
+.la-approach-card,
+.la-service-card,
+.la-support-card {
+  transition: all 0.3s ease;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.la-benefit-card:hover,
+.la-approach-card:hover,
+.la-service-card:hover,
+.la-support-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.la-benefit-card:hover .la-card-img,
+.la-approach-card:hover .la-card-img,
+.la-service-card:hover .la-card-img,
+.la-support-card:hover .la-card-img {
+  transform: scale(1.05);
+}
+
+.la-card-icon {
+  color: #2b6aa1;
+  margin-bottom: 15px;
+}
+
+.la-card-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #2b6aa1;
+  line-height: 1.4;
+}
+
+.la-card-desc {
+  font-size: 14px;
+  font-weight: 300;
+  color: #666666;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+// Approach Steps
+.la-approach-card {
+  position: relative;
+}
+
+.la-step-number {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 40px;
+  background-color: #bf5b01;
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 16px;
+  z-index: 2;
+}
+
+.la-approach-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #2b6aa1;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+.la-approach-desc {
+  font-size: 14px;
+  font-weight: 300;
+  color: #666666;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+// Utility Classes
+.min-vh-80 {
+  min-height: 80vh;
+}
+
+.text-white {
+  color: #ffffff;
+}
+
+.bg-light {
+  background-color: #f8f9fa;
+}
+
+.bg-white {
+  background-color: #ffffff;
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+  .la-hero-title {
+    font-size: 32px;
+  }
+  
+  .la-hero-desc {
+    font-size: 18px;
+  }
+  
+  .la-section-title {
+    font-size: 28px;
+  }
+  
+  .d-flex.gap-3 {
+    flex-direction: column;
+    gap: 15px !important;
+  }
+  
+  .d-flex.gap-3 .btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .la-hero-banner {
+    padding: 80px 0;
+  }
+  
+  .la-hero-title {
+    font-size: 28px;
+  }
+  
+  .la-section-title {
+    font-size: 24px;
+  }
+}

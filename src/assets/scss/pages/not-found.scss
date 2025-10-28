@@ -1,0 +1,89 @@
+.not-found-minimal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 90vh;
+  background-color: #FDFD96; 
+  padding: 2rem;
+  text-align: center;
+}
+
+.error-video-container {
+  max-width: 600px; // larger than image version to show video better
+  width: 100%;
+  margin-bottom: 20px;
+  animation: fadeIn 0.8s ease-out;
+
+  .error-video {
+    width: 100%;
+    height: auto;
+    border-radius: 24px;
+    display: block;
+    margin: 0 auto; 
+    object-fit: cover; 
+  }
+}
+
+.error-actions-single {
+  text-align: center;
+}
+
+.home-button-single {
+  padding: 0.75rem 3rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #4a6bff 0%, #6a11cb 100%);
+  border: none;
+  box-shadow: 0 4px 15px rgba(74, 107, 255, 0.3);
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: white;
+}
+
+.home-button-single:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(74, 107, 255, 0.4);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 1024px) {
+  .error-video-container {
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 768px) {
+  .error-video-container {
+    max-width: 90%; // use most of screen on mobile
+    margin-bottom: 2rem;
+  }
+
+  .home-button-single {
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .error-video-container {
+    border-radius: 16px; // slightly smaller for tiny screens
+  }
+
+  .home-button-single {
+    width: 100%; // full width button on small screens
+    font-size: 0.95rem;
+  }
+}

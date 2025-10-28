@@ -1,0 +1,87 @@
+.website-development-page-wrapper {
+  font-family: Arial, sans-serif;
+  color: #333;
+  overflow-x: hidden;
+}
+
+/* Hero Section */
+.website-development-hero {
+  background-color: #333;
+  padding: 80px 40px;
+  position: relative;
+
+  .website-development-hero-title {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+  }
+
+  .website-development-hero-subtitle {
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 15px;
+  }
+
+  .website-development-breadcrumbs {
+    font-size: 14px;
+  }
+
+  .website-development-hero-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+}
+
+/* Main Content Section */
+.website-development-main-content {
+  padding: 60px 40px;
+  background-color: #fff;
+
+  .website-development-section-heading {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1D4ED8;
+    margin-bottom: 20px;
+    margin-top: 40px;
+  }
+
+  .website-development-checklist {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+
+    li {
+      display: flex;
+      align-items: center;
+      font-size: 16px;
+      color: #666;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .website-development-hero {
+    text-align: center;
+    padding: 40px 20px;
+
+    .website-development-hero-title {
+      font-size: 36px;
+    }
+  }
+
+  .website-development-main-content {
+    padding: 30px 20px;
+
+    .website-development-section-heading {
+      font-size: 24px;
+    }
+
+    .website-development-checklist li {
+      font-size: 14px;
+    }
+  }
+}

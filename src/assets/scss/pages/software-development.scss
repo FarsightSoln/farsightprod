@@ -1,0 +1,306 @@
+// Hero Section
+.website-dev-hero-banner {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 50px 0;
+}
+
+.website-dev-hero-title {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.website-dev-hero-subtitle {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+// Breadcrumbs
+.website-dev-breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.website-dev-breadcrumb-icon {
+  color: #bf5b01;
+}
+
+.website-dev-breadcrumb-text {
+  font-weight: 300;
+}
+
+.website-dev-breadcrumb-separator {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+// Sections
+.website-dev-section-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #2b6aa1;
+  margin-bottom: 20px;
+}
+
+.website-dev-content-text {
+  font-size: 16px;
+  font-weight: 300;
+  color: #666666;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+// About Section
+.website-dev-about-img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.website-dev-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.website-dev-feature-item {
+  background-color: #f8f9fa;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #2b6aa1;
+  border-left: 4px solid #bf5b01;
+}
+
+// Service Cards
+.website-service-img {
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.website-service-card {
+  transition: all 0.3s ease;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.website-service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.website-service-card:hover .website-service-img {
+  transform: scale(1.05);
+}
+
+.website-service-icon {
+  color: #2b6aa1;
+}
+
+.website-service-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #2b6aa1;
+  line-height: 1.4;
+}
+
+.website-service-description {
+  font-size: 14px;
+  font-weight: 300;
+  color: #666666;
+  line-height: 1.6;
+}
+
+.website-service-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.website-service-feature-tag {
+  background-color: #f8f9fa;
+  color: #2b6aa1;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  border: 1px solid #e9ecef;
+}
+
+// Benefit Cards
+.website-benefit-card {
+  transition: all 0.3s ease;
+  border-radius: 12px;
+  border-left: 4px solid #2b6aa1;
+}
+
+.website-benefit-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.website-benefit-icon {
+  color: #2b6aa1;
+}
+
+.website-benefit-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #2b6aa1;
+}
+
+.website-benefit-description {
+  font-size: 14px;
+  font-weight: 300;
+  color: #666666;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+// Technology Cards
+.website-tech-card {
+  transition: all 0.3s ease;
+  border-radius: 12px;
+}
+
+.website-tech-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.website-tech-icon {
+  color: #2b6aa1;
+}
+
+.website-tech-category {
+  font-size: 16px;
+  font-weight: 600;
+  color: #2b6aa1;
+}
+
+.website-tech-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.website-tech-tag {
+  background-color: #f8f9fa;
+  color: #2b6aa1;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  border: 1px solid #e9ecef;
+}
+
+// Process Cards
+.website-process-card {
+  transition: all 0.3s ease;
+  border-radius: 12px;
+  border-left: 4px solid #2b6aa1;
+}
+
+.website-process-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.website-process-step-number {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #2b6aa1, #1f4f7a);
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.website-process-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #2b6aa1;
+}
+
+.website-process-description {
+  font-size: 14px;
+  font-weight: 300;
+  color: #666666;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+// Utility Classes
+.min-vh-60 {
+  min-height: 60vh;
+}
+
+.text-white {
+  color: #ffffff;
+}
+
+.bg-light {
+  background-color: #f8f9fa;
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+  .website-dev-hero-title {
+    font-size: 32px;
+  }
+  
+  .website-dev-hero-subtitle {
+    font-size: 16px;
+  }
+  
+  .website-dev-section-title {
+    font-size: 28px;
+  }
+  
+  .website-dev-content-text {
+    font-size: 14px;
+  }
+  
+  .website-dev-features {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .website-dev-hero-banner {
+    padding: 80px 0;
+  }
+  
+  .website-dev-hero-title {
+    font-size: 28px;
+  }
+  
+  .website-dev-section-title {
+    font-size: 24px;
+  }
+  
+  .website-dev-breadcrumbs {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .website-service-features {
+    justify-content: flex-start;
+  }
+}

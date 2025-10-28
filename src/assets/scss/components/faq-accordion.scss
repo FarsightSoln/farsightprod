@@ -1,0 +1,55 @@
+// Variables for theme
+$primary-color: #2563eb;
+$text-primary: #1a2b40;
+$text-secondary: #4b5563;
+$border-color: #e5e7eb;
+$background-light: #f9fafb;
+$transition: 0.3s ease;
+
+// Wrapper
+.faq-accordion-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+// Accordion Item
+.accordion-item {
+  border: 1px solid $border-color;
+  transition: background $transition;
+
+  &:hover {
+    background: $background-light;
+  }
+}
+
+// Accordion Header
+.accordion-button {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: $text-primary;
+  background: transparent !important;
+  box-shadow: none !important;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  &::after {
+    display: none; // Remove Bootstrap default arrow
+  }
+
+  &:not(.collapsed) {
+    color: $primary-color;
+  }
+}
+
+// Accordion Body
+.accordion-body {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: $text-secondary;
+}
+
+// Smooth transition
+.accordion-collapse {
+  transition: height $transition;
+}

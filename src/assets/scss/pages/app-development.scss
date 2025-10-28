@@ -1,0 +1,305 @@
+// Hero Section
+.app-hero-banner {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 50px 0;
+}
+
+.app-hero-title {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.app-hero-subtitle {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+// Breadcrumbs
+.app-breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.app-breadcrumb-icon {
+  color: #bf5b01;
+}
+
+.app-breadcrumb-text {
+  font-weight: 300;
+}
+
+.app-breadcrumb-separator {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+// Sections
+.app-section-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #2b6aa1;
+  margin-bottom: 20px;
+}
+
+.app-content-text {
+  font-size: 16px;
+  font-weight: 300;
+  color: #666666;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+// About Section
+.app-about-img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.app-features-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.app-feature-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #2b6aa1;
+}
+
+.app-feature-icon {
+  color: #bf5b01;
+  flex-shrink: 0;
+}
+
+// Service Cards
+.app-service-card {
+  transition: all 0.3s ease;
+  border-radius: 12px;
+}
+
+.app-service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.app-service-icon-wrapper {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #2b6aa1, #1f4f7a);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.app-service-icon {
+  color: #ffffff;
+}
+
+.app-service-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #2b6aa1;
+  line-height: 1.4;
+}
+
+.app-service-description {
+  font-size: 14px;
+  font-weight: 300;
+  color: #666666;
+  line-height: 1.6;
+}
+
+.app-service-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+.app-service-feature-tag {
+  background-color: #f8f9fa;
+  color: #2b6aa1;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  border: 1px solid #e9ecef;
+}
+
+// Benefit Cards
+.app-benefit-card {
+  transition: all 0.3s ease;
+  border-radius: 12px;
+}
+
+.app-benefit-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.app-benefit-icon {
+  color: #2b6aa1;
+}
+
+.app-benefit-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #2b6aa1;
+}
+
+.app-benefit-description {
+  font-size: 14px;
+  font-weight: 300;
+  color: #666666;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+// Process Cards
+.app-process-card {
+  transition: all 0.3s ease;
+  border-radius: 12px;
+  border-left: 4px solid #2b6aa1;
+}
+
+.app-process-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.app-process-step-number {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #2b6aa1, #1f4f7a);
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.app-process-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #2b6aa1;
+}
+
+.app-process-description {
+  font-size: 14px;
+  font-weight: 300;
+  color: #666666;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+// Technology Cards
+.app-tech-card {
+  transition: all 0.3s ease;
+  border-radius: 12px;
+}
+
+.app-tech-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.app-tech-icon {
+  color: #2b6aa1;
+}
+
+.app-tech-category {
+  font-size: 16px;
+  font-weight: 600;
+  color: #2b6aa1;
+}
+
+.app-tech-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.app-tech-tag {
+  background-color: #f8f9fa;
+  color: #2b6aa1;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  border: 1px solid #e9ecef;
+}
+
+// Utility Classes
+.min-vh-80 {
+  min-height: 80vh;
+}
+
+.text-white {
+  color: #ffffff;
+}
+
+.bg-light {
+  background-color: #f8f9fa;
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+  .app-hero-title {
+    font-size: 32px;
+  }
+  
+  .app-hero-subtitle {
+    font-size: 16px;
+  }
+  
+  .app-section-title {
+    font-size: 28px;
+  }
+  
+  .app-content-text {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  .app-hero-banner {
+    padding: 80px 0;
+  }
+  
+  .app-hero-title {
+    font-size: 28px;
+  }
+  
+  .app-section-title {
+    font-size: 24px;
+  }
+  
+  .app-breadcrumbs {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .app-service-features {
+    justify-content: flex-start;
+  }
+}

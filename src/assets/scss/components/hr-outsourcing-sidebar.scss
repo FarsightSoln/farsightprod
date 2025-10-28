@@ -1,0 +1,51 @@
+.hr-outsourcing-sidebar-wrapper {
+    background-color: #e0f0f7; /* Light blue background */
+    padding: 30px;
+    border-radius: 8px;
+  }
+
+  .hr-outsourcing-sidebar-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1a2b40; /* Dark blue */
+    margin-bottom: 20px;
+  }
+
+  .hr-outsourcing-sidebar-list-group {
+    border-radius: 0;
+  }
+
+  .hr-outsourcing-sidebar-list-item {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 12px 0;
+  }
+
+  .hr-outsourcing-sidebar-list-item:last-child {
+    border-bottom: none;
+  }
+
+  .hr-outsourcing-sidebar-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #333; /* Primary text color */
+    text-decoration: none;
+    font-weight: 300; /* Light font-weight */
+    transition: color 0.3s ease;
+  }
+
+  .hr-outsourcing-sidebar-link:hover {
+    color: #8dc63f; /* Light green */
+  }
+
+  .hr-outsourcing-sidebar-arrow {
+    color: #666; /* Grey text */
+    transition: transform 0.3s ease;
+  }
+
+  .hr-outsourcing-sidebar-link:hover .hr-outsourcing-sidebar-arrow {
+    transform: translateX(5px);
+    color: #8dc63f; /* Light green */
+  }

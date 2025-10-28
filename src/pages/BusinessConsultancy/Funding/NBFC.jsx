@@ -1,644 +1,442 @@
 "use client"
-import React, { useState, useEffect } from 'react';
-import { Container, Row, Col, Card, Button, Accordion, Badge } from "react-bootstrap"
-import { CheckCircle, ArrowRight, Clock, Shield, TrendingUp, Users, FileText, Zap, Target, Building } from "lucide-react";
+import React, { useEffect, useRef, useState } from "react"
+import "bootstrap/dist/css/bootstrap.min.css"
+import { Link } from "react-router-dom"
+import "../../../assets/scss/pages/loan.scss";
 
-// // Import images
-// import nbfcHeroBanner from "../../../assets/images/nbfc-hero-banner.jpg";
-// import workingCapitalImage from "../../../assets/images/working-capital.jpg";
-// import termLoanImage from "../../../assets/images/term-loan.jpg";
-// import equipmentLoanImage from "../../../assets/images/equipment-loan.jpg";
-// import invoiceFinancingImage from "../../../assets/images/invoice-financing.jpg";
-// import businessCreditImage from "../../../assets/images/business-credit.jpg";
-// import merchantCashImage from "../../../assets/images/merchant-cash.jpg";
-// import unsecuredLoanImage from "../../../assets/images/unsecured-loan.jpg";
-// import productDevelopmentImage from "../../../assets/images/product-development.jpg";
-// import expansionLoanImage from "../../../assets/images/expansion-loan.jpg";
-// import technologyLoanImage from "../../../assets/images/technology-loan.jpg";
-// import marketingLoanImage from "../../../assets/images/marketing-loan.jpg";
-// import inventoryLoanImage from "../../../assets/images/inventory-loan.jpg";
-// import nbfcBenefitsImage from "../../../assets/images/nbfc-benefits.jpg";
+export default function NBFC() {
+  const [offsetY, setOffsetY] = useState(0)
+  const heroRef = useRef(null)
 
-// Replace the import statements with these if using online images
-const nbfcHeroBanner = "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80";
-const workingCapitalImage = "https://images.unsplash.com/photo-1551836026-d5cbc2f4c4b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80";
-const termLoanImage = "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80";
-const equipmentLoanImage = "https://images.unsplash.com/photo-1565689228866-1d7db59f6bad?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80";
-const invoiceFinancingImage = "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80";
-const businessCreditImage = "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80";
-const merchantCashImage = "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80";
-const unsecuredLoanImage = "https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80";
-const productDevelopmentImage = "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80";
-const expansionLoanImage = "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80";
-const technologyLoanImage = "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80";
-const marketingLoanImage = "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80";
-const inventoryLoanImage = "https://images.unsplash.com/photo-1563010047-9bb6e0c6aff6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80";
-const nbfcBenefitsImage = "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80";
+  useEffect(() => {
+    // Lightweight scroll handler using requestAnimationFrame to avoid jank
+    let ticking = false
 
-import "../../../assets/scss/pages/nbfc.scss";
-
-const NBFC = () => {
-  const [expandedFaq, setExpandedFaq] = useState(null)
-  const [activeNbfcTab, setActiveNbfcTab] = useState("all")
-
-  const nbfcFeatures = [
-    {
-      icon: Clock,
-      title: "Quick Approval",
-      description: "Funds disbursed within 24-72 hours"
-    },
-    {
-      icon: Shield,
-      title: "Collateral-Free",
-      description: "Minimal or no security required"
-    },
-    {
-      icon: TrendingUp,
-      title: "Flexible Terms",
-      description: "Customized repayment options"
-    },
-    {
-      icon: Users,
-      title: "Easy Eligibility",
-      description: "Simplified documentation process"
+    const handleScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          setOffsetY(window.scrollY)
+          ticking = false
+        })
+        ticking = true
+      }
     }
-  ]
 
-const nbfcLoans = [
-  {
-    id: 1,
-    amount: "Up to ₹1,00,000",
-    title: "Working Capital Loans",
-    description: "Fast funding for day-to-day business operations and cash flow management.",
-    image: workingCapitalImage,
-    features: ["24-48 hrs approval", "Flexible repayment", "No collateral"],
-    badge: "Fastest",
-    tenure: "3-12 months"
-  },
-  {
-    id: 2,
-    amount: "Up to ₹5,00,000",
-    title: "Term Loans",
-    description: "Medium to long-term funding for business expansion and infrastructure.",
-    image: termLoanImage,
-    features: ["Up to 5 years", "Fixed interest", "Business growth"],
-    badge: "Popular",
-    tenure: "1-5 years"
-  },
-  {
-    id: 3,
-    amount: "Up to ₹10,00,000",
-    title: "Equipment & Machinery Loans",
-    description: "Financing for equipment, machinery, and technology upgrades.",
-    image: equipmentLoanImage,
-    features: ["80% financing", "New/used equipment", "Tax benefits"],
-    badge: "Asset",
-    tenure: "2-5 years"
-  },
-  {
-    id: 4,
-    amount: "Up to ₹15,00,000",
-    title: "Invoice Financing",
-    description: "Quick cash against pending invoices to improve cash flow.",
-    image: invoiceFinancingImage,
-    features: ["90% advance", "Credit protection", "Flexible limits"],
-    badge: "Cash Flow",
-    tenure: "30-180 days"
-  },
-  {
-    id: 5,
-    amount: "Up to ₹20,00,000",
-    title: "Business Line of Credit",
-    description: "Flexible credit line for ongoing business needs and opportunities.",
-    image: businessCreditImage,
-    features: ["Revolving limit", "Pay interest only", "Any business need"],
-    badge: "Flexible",
-    tenure: "1-3 years"
-  },
-  {
-    id: 6,
-    amount: "Up to ₹25,00,000",
-    title: "Merchant Cash Advance",
-    description: "Fast funding based on your business's future credit card sales.",
-    image: merchantCashImage,
-    features: ["No fixed EMI", "Revenue sharing", "Quick approval"],
-    badge: "Revenue Based",
-    tenure: "3-24 months"
-  },
-  {
-    id: 7,
-    amount: "Up to ₹30,00,000",
-    title: "Unsecured Business Loans",
-    description: "Quick loans without collateral requirements for established businesses.",
-    image: unsecuredLoanImage,
-    features: ["No collateral", "Quick processing", "Multi-purpose"],
-    badge: "Unsecured",
-    tenure: "6 months - 3 years"
-  },
-];
+    window.addEventListener("scroll", handleScroll, { passive: true })
+    // set initial value
+    setOffsetY(window.scrollY)
 
-const specializedLoans = [
-  {
-    id: 1,
-    amount: "Up to ₹50,000",
-    title: "Product Development Loans",
-    description: "Funding for product innovation, R&D, and prototype development.",
-    image: productDevelopmentImage,
-    category: "Innovation"
-  },
-  {
-    id: 2,
-    amount: "Up to ₹1,50,000",
-    title: "Working Capital Loans",
-    description: "Quick funding for operational needs and daily business expenses.",
-    image: workingCapitalImage,
-    category: "Operations"
-  },
-  {
-    id: 3,
-    amount: "Up to ₹2,50,000",
-    title: "Expansion Loans",
-    description: "Capital for business expansion, new branches, and market entry.",
-    image: expansionLoanImage,
-    category: "Growth"
-  },
-  {
-    id: 4,
-    amount: "Up to ₹3,50,000",
-    title: "Technology Loans",
-    description: "Funding for tech infrastructure, software, and digital transformation.",
-    image: technologyLoanImage,
-    category: "Technology"
-  },
-  {
-    id: 5,
-    amount: "Up to ₹4,50,000",
-    title: "Marketing Loans",
-    description: "Capital for marketing campaigns, brand building, and customer acquisition.",
-    image: marketingLoanImage,
-    category: "Marketing"
-  },
-  {
-    id: 6,
-    amount: "Up to ₹5,50,000",
-    title: "Inventory Loans",
-    description: "Financing for inventory management, stock purchase, and supply chain.",
-    image: inventoryLoanImage,
-    category: "Inventory"
-  },
-];
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
 
-
-  const faqs = [
-    {
-      id: 1,
-      question: "Which is the best NBFC for business loan?",
-      answer: "The best NBFC depends on your business needs, loan amount, and repayment capacity. Our experts can help you compare options and find the right fit.",
-    },
-    {
-      id: 2,
-      question: "What is the minimum GST required for an NBFC loan?",
-      answer: "Most NBFCs require a minimum GST turnover of ₹20-50 lakhs annually, though this varies by lender.",
-    },
-    {
-      id: 3,
-      question: "Any GST-related business loans available?",
-      answer: "Yes, many NBFCs offer GST-linked loans with flexible terms based on your GST filing history.",
-    },
-    {
-      id: 4,
-      question: "How much time can I get from an NBFC?",
-      answer: "NBFC loan tenure typically ranges from 12 months to 5 years, depending on the loan type and amount.",
-    },
-    {
-      id: 5,
-      question: "Can startups apply for NBFC business loans?",
-      answer: "Yes, many NBFCs offer specialized loans for startups with flexible eligibility criteria.",
-    },
-    {
-      id: 6,
-      question: "What is the repayment period for NBFC loan?",
-      answer: "Repayment periods vary from 12 months to 60 months depending on the loan type and amount borrowed.",
-    },
-  ]
-
-  const benefits = [
-    {
-      icon: Zap,
-      title: "Lightning Fast Approval",
-      description: "Get funds within 24-72 hours with minimal documentation"
-    },
-    {
-      icon: Shield,
-      title: "Collateral-Free Options",
-      description: "Access funds without pledging assets or property"
-    },
-    {
-      icon: TrendingUp,
-      title: "Flexible Repayment",
-      description: "Choose EMI plans that match your cash flow patterns"
-    },
-    {
-      icon: Building,
-      title: "Business-Focused",
-      description: "Loans designed specifically for business growth needs"
-    }
-  ]
-
-  const eligibilityCriteria = [
-    {
-      title: "Business Age",
-      requirement: "6 months to 2+ years",
-      description: "Minimum business operation period"
-    },
-    {
-      title: "Annual Turnover",
-      requirement: "₹20L to ₹2Cr+",
-      description: "Minimum annual business revenue"
-    },
-    {
-      title: "Credit Score",
-      requirement: "650+",
-      description: "Minimum credit score requirement"
-    },
-    {
-      title: "Documentation",
-      requirement: "Basic Business Docs",
-      description: "GST, PAN, Bank statements required"
-    }
-  ]
+  // parallax translation factor and opacity mapping
+  const parallax = Math.round(offsetY * 0.2)
+  const opacity = Math.max(0.35, 1 - offsetY / 600)
 
   return (
-    <div className="nbfc-wrapper">
+    <div className="loan-page">
       {/* Hero Section */}
-      <section className="nbfc-hero">
-        <div 
-          className="nbfc-hero-banner"
-          style={{
-            backgroundImage: `linear-gradient(rgba(11, 11, 11, 0.81), rgba(0, 0, 0, 0.49)), url(${nbfcHeroBanner})`
-          }}
+      <section className="hero-section">
+        {/*
+          hero-inner is moved on scroll via inline style for a simple parallax + fade effect.
+          We keep the effect lightweight and avoid external animation libraries here.
+        */}
+        <div
+          className="container hero-inner"
+          ref={heroRef}
+          style={{ transform: `translateY(${parallax}px)`, opacity }}
         >
-          <Container>
-            <Row className="align-items-center min-vh-60">
-              <Col lg={10} className="mx-auto text-center text-white">
-                <Badge bg="warning" text="dark" className="mb-3 nbfc-hero-badge">
-                  ⚡ Approval in 24-72 Hours
-                </Badge>
-                <h1 className="nbfc-hero-title mb-4">
-                  NBFC Business Loans
-                </h1>
-                <p className="nbfc-hero-subtitle lead mb-4">
-                  Flexible Funding Solutions for Rapid Business Growth
-                </p>
-                <p className="nbfc-hero-description mb-5">
-                  Get quick, collateral-free business loans with flexible terms. Whether you need working capital, 
-                  expansion funds, or equipment financing, NBFCs provide faster approval and customized solutions.
-                </p>
-                
-                <div className="nbfc-features-grid mb-5">
-                  {nbfcFeatures.map((feature, index) => {
-                    const IconComponent = feature.icon;
-                    return (
-                      <div key={index} className="nbfc-feature-item">
-                        <IconComponent size={24} className="nbfc-feature-icon" />
-                        <div>
-                          <h6 className="nbfc-feature-title">{feature.title}</h6>
-                          <p className="nbfc-feature-desc">{feature.description}</p>
-                        </div>
-                      </div>
-                    );
-                  })}
-                </div>
-
-                <div className="nbfc-hero-buttons">
-                  <Button className="nbfc-btn nbfc-btn-primary btn-lg me-3 mb-3">
-                    Apply Now <ArrowRight size={18} />
-                  </Button>
-                  <Button className="nbfc-btn nbfc-btn-light btn-lg mb-3">
-                    Check Eligibility
-                  </Button>
-                </div>
-              </Col>
-            </Row>
-          </Container>
+          <div className="hero-subtitle">Quick Disbursement • Flexible Eligibility • Specialized Products</div>
+          <h1>NBFC Financing Solutions</h1>
+          <p className="hero-description">
+            Access alternative business funding through Enego's NBFC financing services, offering faster processing,
+            flexible eligibility criteria, and specialized lending products tailored for businesses with unique
+            requirements or limited banking history.
+          </p>
         </div>
       </section>
 
-      {/* What Are NBFC Business Loans */}
-      <section className="nbfc-section nbfc-what-section py-5">
-        <Container>
-          <Row className="align-items-center">
-            <Col lg={6} className="mb-5 mb-lg-0">
-              <div className="nbfc-content-left">
-                <h2 className="nbfc-section-title mb-4">What Are NBFC Business Loans?</h2>
-                <p className="nbfc-section-subtitle lead mb-4">
-                  NBFC Business Loans are flexible financial solutions provided by Non-Banking Financial Companies 
-                  to support businesses with faster approval, minimal documentation, and customized terms.
-                </p>
-                
-                <div className="nbfc-benefits-list">
-                  <div className="nbfc-benefit-item">
-                    <CheckCircle size={20} className="nbfc-benefit-icon" />
-                    <span>Faster Approval (24-72 hours)</span>
+      {/* Overview Section */}
+      <section className="py-5 bg-light">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-6 mb-4">
+              <div className="section-label">Overview</div>
+              <h2 className="text-start mb-4">Why Consider NBFC Financing?</h2>
+              <p className="text-muted mb-4">
+                Non-Banking Financial Companies (NBFCs) offer essential alternatives to traditional bank financing, with
+                unique advantages including faster processing, more flexible eligibility criteria, specialized
+                sector-focused products, and innovative lending approaches for businesses with limited banking history or
+                non-traditional requirements.
+              </p>
+              <p className="text-muted mb-4">
+                Enego specializes in connecting businesses with the optimal NBFC partners based on specific funding needs
+                and eligibility profiles. Our deep industry relationships and understanding of NBFC lending criteria enable
+                us to secure favorable terms while significantly accelerating the approval and disbursement process.
+              </p>
+              <div className="d-flex align-items-start mb-3">
+                <span className="check-icon">✓</span>
+                <span>Accelerated processing and disbursement compared to traditional banking</span>
+              </div>
+              <div className="d-flex align-items-start mb-3">
+                <span className="check-icon">✓</span>
+                <span>Flexible eligibility criteria with focus on business potential over historical metrics</span>
+              </div>
+              <div className="d-flex align-items-start mb-3">
+                <span className="check-icon">✓</span>
+                <span>Specialized financing solutions for specific industries and business models</span>
+              </div>
+              <div className="d-flex align-items-start mb-3">
+                <span className="check-icon">✓</span>
+                <span>Options for businesses with limited banking history or previous credit challenges</span>
+              </div>
+            </div>
+            <div className="col-lg-6">
+              <div className="row g-3">
+                <div className="col-6">
+                  <div className="icon-card">
+                    <div className="icon-wrapper" style={{ background: "#dcfce7" }}>
+                      <span style={{ color: "#22c55e" }}>🎯</span>
+                    </div>
+                    <h6 className="fw-bold">Focused</h6>
                   </div>
-                  <div className="nbfc-benefit-item">
-                    <CheckCircle size={20} className="nbfc-benefit-icon" />
-                    <span>Collateral-Free Options Available</span>
+                </div>
+                <div className="col-6">
+                  <div className="icon-card">
+                    <div className="icon-wrapper" style={{ background: "#dbeafe" }}>
+                      <span style={{ color: "#3b82f6" }}>🔒</span>
+                    </div>
+                    <h6 className="fw-bold">Secure</h6>
                   </div>
-                  <div className="nbfc-benefit-item">
-                    <CheckCircle size={20} className="nbfc-benefit-icon" />
-                    <span>Flexible Repayment Terms</span>
+                </div>
+                <div className="col-6">
+                  <div className="icon-card">
+                    <div className="icon-wrapper" style={{ background: "#fef3c7" }}>
+                      <span style={{ color: "#f59e0b" }}>⚡</span>
+                    </div>
+                    <h6 className="fw-bold">Fast</h6>
                   </div>
-                  <div className="nbfc-benefit-item">
-                    <CheckCircle size={20} className="nbfc-benefit-icon" />
-                    <span>Minimal Documentation Required</span>
+                </div>
+                <div className="col-6">
+                  <div className="icon-card">
+                    <div className="icon-wrapper" style={{ background: "#f3f4f6" }}>
+                      <span style={{ color: "#1f2937" }}>✓</span>
+                    </div>
+                    <h6 className="fw-bold">Trusted</h6>
                   </div>
                 </div>
               </div>
-            </Col>
-            
-            <Col lg={6}>
-              <div className="nbfc-illustration-box text-center">
-                <img 
-                  src={nbfcBenefitsImage} 
-                  alt="NBFC Benefits" 
-                  className="nbfc-illustration-img rounded-3"
-                />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Our NBFC Financing Services */}
+      <section className="py-5">
+        <div className="container">
+          <div className="section-label">Benefits</div>
+          <h2 className="section-title">Our NBFC Financing Services</h2>
+          <div className="row g-4">
+            <div className="col-md-6 col-lg-4">
+              <div className="service-card">
+                <div className="icon-wrapper" style={{ background: "#dbeafe" }}>
+                  <span style={{ color: "#3b82f6" }}>⚡</span>
+                </div>
+                <h5>Express Business Loans</h5>
+                <p className="text-muted">
+                  Quick-disbursement loans with minimal documentation and 24-48 hour processing for urgent business requirements.
+                </p>
               </div>
-            </Col>
-          </Row>
-        </Container>
-      </section>
-
-      {/* Key Benefits */}
-      <section className="nbfc-section nbfc-benefits-section py-5 bg-light">
-        <Container>
-          <div className="nbfc-section-header text-center mb-5">
-            <h2 className="nbfc-section-title mb-4">Why Choose NBFC Business Loans?</h2>
-            <p className="nbfc-section-subtitle lead">
-              Experience faster, more flexible funding compared to traditional banking
-            </p>
-          </div>
-
-          <Row className="g-4">
-            {benefits.map((benefit, index) => {
-              const IconComponent = benefit.icon;
-              return (
-                <Col key={index} md={6} lg={3}>
-                  <Card className="nbfc-benefit-card h-100 shadow-sm border-0 text-center">
-                    <Card.Body className="p-4">
-                      <div className="nbfc-benefit-icon-wrapper mb-4">
-                        <IconComponent size={32} className="nbfc-benefit-icon" />
-                      </div>
-                      <Card.Title className="nbfc-benefit-title h6 mb-3">{benefit.title}</Card.Title>
-                      <Card.Text className="nbfc-benefit-description">{benefit.description}</Card.Text>
-                    </Card.Body>
-                  </Card>
-                </Col>
-              );
-            })}
-          </Row>
-        </Container>
-      </section>
-
-      {/* Types of NBFC Loans */}
-      <section className="nbfc-section nbfc-types-section py-5">
-        <Container>
-          <div className="nbfc-section-header text-center mb-5">
-            <h2 className="nbfc-section-title mb-4">Types of NBFC Business Loans</h2>
-            <p className="nbfc-section-subtitle lead">
-              Choose from a wide range of flexible financing options tailored to your business needs
-            </p>
-          </div>
-
-          <Row className="g-4">
-            {nbfcLoans.map((loan) => (
-              <Col key={loan.id} md={6} lg={4}>
-                <Card className="nbfc-card h-100 shadow-sm border-0">
-                  <Card.Img 
-                    variant="top" 
-                    src={loan.image} 
-                    className="nbfc-card-img"
-                    alt={loan.title}
-                  />
-                  <Card.Body className="p-4">
-                    <div className="d-flex justify-content-between align-items-start mb-3">
-                      <div className="nbfc-amount">{loan.amount}</div>
-                      <Badge bg="primary" className="nbfc-badge">
-                        {loan.badge}
-                      </Badge>
-                    </div>
-                    <Card.Title className="nbfc-card-title h5 mb-3">{loan.title}</Card.Title>
-                    <Card.Text className="nbfc-card-description mb-4">{loan.description}</Card.Text>
-                    
-                    <div className="nbfc-loan-details mb-4">
-                      <div className="nbfc-tenure">
-                        <strong>Tenure:</strong> {loan.tenure}
-                      </div>
-                    </div>
-                    
-                    <div className="nbfc-features-tags mb-4">
-                      {loan.features.map((feature, index) => (
-                        <span key={index} className="nbfc-feature-tag">
-                          {feature}
-                        </span>
-                      ))}
-                    </div>
-                    
-                    <Button className="nbfc-btn nbfc-btn-primary w-100">
-                      Apply Now
-                    </Button>
-                  </Card.Body>
-                </Card>
-              </Col>
-            ))}
-          </Row>
-        </Container>
-      </section>
-
-      {/* Specialized Loan Programs */}
-      <section className="nbfc-section nbfc-specialized-section py-5 bg-light">
-        <Container>
-          <div className="nbfc-section-header text-center mb-5">
-            <h2 className="nbfc-section-title mb-4">Specialized Loan Programs</h2>
-            <p className="nbfc-section-subtitle lead">
-              Tailored financing solutions for specific business requirements
-            </p>
-          </div>
-
-          <Row className="g-4">
-            {specializedLoans.map((loan) => (
-              <Col key={loan.id} md={6} lg={4}>
-                <Card className="nbfc-special-card h-100 shadow-sm border-0">
-                  <Card.Img 
-                    variant="top" 
-                    src={loan.image} 
-                    className="nbfc-card-img"
-                    alt={loan.title}
-                  />
-                  <Card.Body className="p-4">
-                    <Badge bg="outline-primary" className="nbfc-category-badge mb-3">
-                      {loan.category}
-                    </Badge>
-                    <div className="nbfc-amount-sm">{loan.amount}</div>
-                    <Card.Title className="nbfc-card-title h5 mb-3">{loan.title}</Card.Title>
-                    <Card.Text className="nbfc-card-description mb-4">{loan.description}</Card.Text>
-                    <Button className="nbfc-btn nbfc-btn-outline w-100">
-                      Learn More
-                    </Button>
-                  </Card.Body>
-                </Card>
-              </Col>
-            ))}
-          </Row>
-        </Container>
-      </section>
-
-      {/* Eligibility Criteria */}
-      <section className="nbfc-section nbfc-eligibility-section py-5">
-        <Container>
-          <div className="nbfc-section-header text-center mb-5">
-            <h2 className="nbfc-section-title mb-4">Eligibility Criteria</h2>
-            <p className="nbfc-section-subtitle lead">
-              Simple requirements to qualify for NBFC business loans
-            </p>
-          </div>
-
-          <Row className="g-4">
-            {eligibilityCriteria.map((criteria, index) => (
-              <Col key={index} md={6} lg={3}>
-                <Card className="nbfc-eligibility-card h-100 shadow-sm border-0 text-center">
-                  <Card.Body className="p-4">
-                    <Card.Title className="nbfc-eligibility-title h6 mb-3">{criteria.title}</Card.Title>
-                    <div className="nbfc-eligibility-requirement mb-3">{criteria.requirement}</div>
-                    <Card.Text className="nbfc-eligibility-description">
-                      {criteria.description}
-                    </Card.Text>
-                  </Card.Body>
-                </Card>
-              </Col>
-            ))}
-          </Row>
-        </Container>
-      </section>
-
-      {/* Documents Required */}
-      <section className="nbfc-section nbfc-documents-section py-5 bg-light">
-        <Container>
-          <div className="nbfc-section-header text-center mb-5">
-            <h2 className="nbfc-section-title mb-4">Documents Required</h2>
-            <p className="nbfc-section-subtitle lead">
-              Minimal documentation for quick processing and approval
-            </p>
-          </div>
-
-          <Row className="g-4">
-            <Col md={6}>
-              <div className="nbfc-doc-list-box">
-                <h4 className="nbfc-subsection-title mb-4">Business Documents</h4>
-                <ul className="nbfc-doc-list">
-                  <li>Business Registration Certificate</li>
-                  <li>GST Registration Certificate</li>
-                  <li>PAN Card of Business</li>
-                  <li>MSME Certificate (if applicable)</li>
-                  <li>Business Address Proof</li>
-                </ul>
+            </div>
+            <div className="col-md-6 col-lg-4">
+              <div className="service-card">
+                <div className="icon-wrapper" style={{ background: "#d1fae5" }}>
+                  <span style={{ color: "#10b981" }}>💰</span>
+                </div>
+                <h5>Working Capital Financing</h5>
+                <p className="text-muted">
+                  Flexible short-term funding for operational expenses, inventory management, and cash flow optimization.
+                </p>
               </div>
-            </Col>
-            <Col md={6}>
-              <div className="nbfc-doc-list-box">
-                <h4 className="nbfc-subsection-title mb-4">Financial Documents</h4>
-                <ul className="nbfc-doc-list">
-                  <li>6 Months Bank Statements</li>
-                  <li>2 Years ITR Returns</li>
-                  <li>Financial Statements</li>
-                  <li>Business Plan/Project Report</li>
-                  <li>KYC Documents of Directors</li>
-                </ul>
+            </div>
+            <div className="col-md-6 col-lg-4">
+              <div className="service-card">
+                <div className="icon-wrapper" style={{ background: "#f3e8ff" }}>
+                  <span style={{ color: "#a855f7" }}>📈</span>
+                </div>
+                <h5>Business Expansion Loans</h5>
+                <p className="text-muted">
+                  Growth-focused financing for market expansion, capacity enhancement, and business scaling initiatives.
+                </p>
               </div>
-            </Col>
-          </Row>
-        </Container>
+            </div>
+            <div className="col-md-6 col-lg-4">
+              <div className="service-card">
+                <div className="icon-wrapper" style={{ background: "#fef3c7" }}>
+                  <span style={{ color: "#f59e0b" }}>🎯</span>
+                </div>
+                <h5>Unsecured Business Loans</h5>
+                <p className="text-muted">
+                  No-collateral financing options based on business performance and revenue potential rather than assets.
+                </p>
+              </div>
+            </div>
+            <div className="col-md-6 col-lg-4">
+              <div className="service-card">
+                <div className="icon-wrapper" style={{ background: "#fee2e2" }}>
+                  <span style={{ color: "#ef4444" }}>💳</span>
+                </div>
+                <h5>Revenue-Based Financing</h5>
+                <p className="text-muted">
+                  Innovative funding with repayments tied to business revenue performance rather than fixed EMI structures.
+                </p>
+              </div>
+            </div>
+            <div className="col-md-6 col-lg-4">
+              <div className="service-card">
+                <div className="icon-wrapper" style={{ background: "#dbeafe" }}>
+                  <span style={{ color: "#3b82f6" }}>🏪</span>
+                </div>
+                <h5>Merchant Cash Advances</h5>
+                <p className="text-muted">
+                  Upfront capital with repayment through percentage of daily card sales, ideal for retail and service businesses.
+                </p>
+              </div>
+            </div>
+            <div className="col-md-6 col-lg-4">
+              <div className="service-card">
+                <div className="icon-wrapper" style={{ background: "#d1fae5" }}>
+                  <span style={{ color: "#10b981" }}>🏭</span>
+                </div>
+                <h5>Equipment Financing</h5>
+                <p className="text-muted">
+                  Specialized funding for machinery, equipment, and technology purchases with flexible repayment structures.
+                </p>
+              </div>
+            </div>
+            <div className="col-md-6 col-lg-4">
+              <div className="service-card">
+                <div className="icon-wrapper" style={{ background: "#f3e8ff" }}>
+                  <span style={{ color: "#a855f7" }}>🔗</span>
+                </div>
+                <h5>Supply Chain Financing</h5>
+                <p className="text-muted">
+                  Optimize cash flow through invoice discounting, purchase order financing, and vendor payment solutions.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
-      {/* FAQ Section */}
-      <section className="nbfc-section nbfc-faq-section py-5">
-        <Container>
-          <div className="nbfc-section-header text-center mb-5">
-            <h2 className="nbfc-section-title mb-4">Frequently Asked Questions</h2>
-            <p className="nbfc-section-subtitle lead">
-              Get answers to common questions about NBFC Business Loans
-            </p>
+      {/* NBFC Financing Eligibility */}
+      <section className="eligibility-section">
+        <div className="container">
+          <div className="section-label" style={{ color: "#ef4444" }}>
+            Requirements
           </div>
+          <h2 className="section-title text-white">NBFC Financing Eligibility</h2>
+          <div className="row mt-5">
+            <div className="col-lg-6 mb-4">
+              <h5 className="text-white mb-3">Who Can Apply?</h5>
+              <div className="eligibility-item">
+                <span className="check-icon">✓</span>
+                <span>Business operational history of at least 6-12 months (varies by product)</span>
+              </div>
+              <div className="eligibility-item">
+                <span className="check-icon">✓</span>
+                <span>Consistent monthly revenue with clear cash flow patterns</span>
+              </div>
+              <div className="eligibility-item">
+                <span className="check-icon">✓</span>
+                <span>Basic financial record keeping and business documentation</span>
+              </div>
+              <div className="eligibility-item">
+                <span className="check-icon">✓</span>
+                <span>Clear business model with demonstrated market potential</span>
+              </div>
+              <div className="eligibility-item">
+                <span className="check-icon">✓</span>
+                <span>Minimum credit score requirements (typically more flexible than banks)</span>
+              </div>
+            </div>
+            <div className="col-lg-6">
+              <h5 className="text-white mb-3">Conditions</h5>
+              <div className="eligibility-item">
+                <span className="check-icon">✓</span>
+                <span>Valid business registration (any structure from Proprietorship to Private Limited)</span>
+              </div>
+              <div className="eligibility-item">
+                <span className="check-icon">✓</span>
+                <span>Active business bank account with transaction history</span>
+              </div>
+              <div className="eligibility-item">
+                <span className="check-icon">✓</span>
+                <span>KYC documentation for directors/partners/proprietors</span>
+              </div>
+              <div className="eligibility-item">
+                <span className="check-icon">✓</span>
+                <span>Basic financial statements (balance sheets, P&L statements)</span>
+              </div>
+              <div className="eligibility-item">
+                <span className="check-icon">✓</span>
+                <span>Industry-specific requirements based on NBFC specialization</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-          <div className="nbfc-faq-tabs mb-4">
-            <Button
-              className={`nbfc-faq-tab ${activeNbfcTab === "all" ? "active" : ""}`}
-              onClick={() => setActiveNbfcTab("all")}
-            >
-              All Questions
-            </Button>
-            <Button
-              className={`nbfc-faq-tab ${activeNbfcTab === "rates" ? "active" : ""}`}
-              onClick={() => setActiveNbfcTab("rates")}
-            >
-              Interest Rates
-            </Button>
-            <Button
-              className={`nbfc-faq-tab ${activeNbfcTab === "legal" ? "active" : ""}`}
-              onClick={() => setActiveNbfcTab("legal")}
-            >
-              Eligibility
-            </Button>
-            <Button
-              className={`nbfc-faq-tab ${activeNbfcTab === "process" ? "active" : ""}`}
-              onClick={() => setActiveNbfcTab("process")}
-            >
-              Process
-            </Button>
+      {/* Our NBFC Financing Process */}
+      <section className="py-5">
+        <div className="container">
+          <div className="section-label">Process</div>
+          <h2 className="section-title">Our NBFC Financing Process</h2>
+          <div className="row g-4 mt-4">
+            <div className="col-md-6 col-lg-4">
+              <div className="process-card">
+                <div className="process-number">1</div>
+                <h5 className="fw-bold">Requirement Analysis</h5>
+                <p className="text-muted">
+                  Understand your funding needs, business model, and financial profile to identify suitable NBFC options.
+                </p>
+              </div>
+            </div>
+            <div className="col-md-6 col-lg-4">
+              <div className="process-card">
+                <div className="process-number">2</div>
+                <h5 className="fw-bold">NBFC Matching</h5>
+                <p className="text-muted">
+                  Select optimal NBFC partners based on your business sector, funding requirements, and eligibility factors.
+                </p>
+              </div>
+            </div>
+            <div className="col-md-6 col-lg-4">
+              <div className="process-card">
+                <div className="process-number">3</div>
+                <h5 className="fw-bold">Application Preparation</h5>
+                <p className="text-muted">
+                  Develop comprehensive application packages highlighting business strengths and addressing potential concerns.
+                </p>
+              </div>
+            </div>
+            <div className="col-md-6 col-lg-4">
+              <div className="process-card">
+                <div className="process-number">4</div>
+                <h5 className="fw-bold">Fast-Track Submission</h5>
+                <p className="text-muted">
+                  Submit applications through priority channels established with our NBFC partners for accelerated processing.
+                </p>
+              </div>
+            </div>
+            <div className="col-md-6 col-lg-4">
+              <div className="process-card">
+                <div className="process-number">5</div>
+                <h5 className="fw-bold">Approval Facilitation</h5>
+                <p className="text-muted">
+                  Coordinate with NBFC underwriters to address queries and expedite the approval decision process.
+                </p>
+              </div>
+            </div>
+            <div className="col-md-6 col-lg-4">
+              <div className="process-card">
+                <div className="process-number">6</div>
+                <h5 className="fw-bold">Term Negotiation</h5>
+                <p className="text-muted">
+                  Secure optimal interest rates, processing fees, and repayment terms through strategic negotiation.
+                </p>
+              </div>
+            </div>
+            <div className="col-md-6 col-lg-4">
+              <div className="process-card">
+                <div className="process-number">7</div>
+                <h5 className="fw-bold">Rapid Disbursement</h5>
+                <p className="text-muted">
+                  Complete documentation and procedural requirements to ensure quick fund release after approval.
+                </p>
+              </div>
+            </div>
           </div>
+        </div>
+      </section>
 
-          <div className="nbfc-accordion-container">
-            <Accordion className="nbfc-accordion">
-              {faqs.map((faq) => (
-                <Accordion.Item key={faq.id} eventKey={faq.id.toString()} className="nbfc-accordion-item">
-                  <Accordion.Header className="nbfc-accordion-header">
-                    {faq.question}
-                  </Accordion.Header>
-                  <Accordion.Body className="nbfc-accordion-body">
-                    {faq.answer}
-                  </Accordion.Body>
-                </Accordion.Item>
-              ))}
-            </Accordion>
+      {/* Documentation Requirements */}
+      <section className="doc-section">
+        <div className="container">
+          <div className="section-label">Documentation</div>
+          <h2 className="section-title">Documentation Requirements</h2>
+          <div className="doc-header">
+            <h5 className="mb-0">Document Checklist</h5>
+            <button className="btn btn-sm btn-outline-light">Download List</button>
           </div>
-        </Container>
+          <div className="row">
+            <div className="col-lg-6">
+              <div className="doc-item">
+                <span className="doc-icon">📄</span>
+                <span>Business registration proof (Incorporation Certificate, Partnership Deed, etc.)</span>
+              </div>
+              <div className="doc-item">
+                <span className="doc-icon">📄</span>
+                <span>KYC documents of directors/partners/proprietors (PAN, Aadhar, etc.)</span>
+              </div>
+              <div className="doc-item">
+                <span className="doc-icon">📄</span>
+                <span>Recent business bank statements (typically last 6-12 months)</span>
+              </div>
+              <div className="doc-item">
+                <span className="doc-icon">📄</span>
+                <span>GST returns (where applicable) for the last 6-12 months</span>
+              </div>
+              <div className="doc-item">
+                <span className="doc-icon">📄</span>
+                <span>Income Tax Returns for business and promoters (last 1-2 years)</span>
+              </div>
+            </div>
+            <div className="col-lg-6">
+              <div className="doc-item">
+                <span className="doc-icon">📄</span>
+                <span>Basic financial statements (Balance Sheet, P&L statements)</span>
+              </div>
+              <div className="doc-item">
+                <span className="doc-icon">📄</span>
+                <span>Business profile and brief business plan</span>
+              </div>
+              <div className="doc-item">
+                <span className="doc-icon">📄</span>
+                <span>Proof of business premises (ownership/rental agreement)</span>
+              </div>
+              <div className="doc-item">
+                <span className="doc-icon">📄</span>
+                <span>Existing loan statements (if any)</span>
+              </div>
+              <div className="doc-item">
+                <span className="doc-icon">📄</span>
+                <span>Industry-specific licenses and permits</span>
+              </div>
+            </div>
+          </div>
+          <div className="alert alert-warning mt-4">
+            <strong>Important:</strong> NBFC documentation requirements are typically more streamlined than traditional banks. The exact requirements vary based on loan product, amount, and specific NBFC policies. Our team provides customized checklists based on your selected financing option.
+          </div>
+        </div>
       </section>
 
       {/* CTA Section */}
-      <section className="nbfc-section nbfc-cta-section py-5">
-        <Container>
-          <div className="nbfc-cta-content text-center text-white">
-            <h2 className="nbfc-cta-title mb-4">
-              Ready to Grow Your Business with NBFC Funding?
-            </h2>
-            <p className="nbfc-cta-subtitle lead mb-5">
-              Get quick approval, flexible terms, and expert guidance throughout the process. 
-              Our NBFC partners offer the perfect financing solution for your business growth.
-            </p>
-            <div className="nbfc-cta-buttons">
-              <Button className="nbfc-btn nbfc-btn-light btn-lg me-3 mb-3">
-                Apply for Loan
-              </Button>
-              <Button className="nbfc-btn nbfc-btn-outline-light btn-lg mb-3">
-                Talk to Expert
-              </Button>
-            </div>
+      <section className="cta-section" style={{ background: "#0b1220" }}>
+        <div className="container">
+          <div className="section-label" style={{ color: "#fecaca" }}>
+            Get Started Today
           </div>
-        </Container>
+          <h2>Ready for Fast, Flexible Financing?</h2>
+          <p className="mb-4" style={{ maxWidth: "700px", margin: "0 auto 30px" }}>
+            Connect with our NBFC financing specialists to identify optimal funding options, streamline your application, and secure quick disbursement for your business needs.
+          </p>
+          <div className="d-flex gap-3 justify-content-center">
+            <Link to="/contact-us" className="btn btn-custom btn-white">Start Application</Link>
+            <button className="btn btn-custom btn-outline-white">📞 Call: 18002961424</button>
+          </div>
+        </div>
       </section>
     </div>
   )
 }
-
-export default NBFC

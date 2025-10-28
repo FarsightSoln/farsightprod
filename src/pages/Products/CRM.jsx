@@ -1,5 +1,3 @@
-"use client"
-
 import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, Card, Button, Badge, Accordion } from "react-bootstrap";
 import { 

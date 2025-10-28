@@ -5,7 +5,7 @@ import { Container, Row, Col, Card } from "react-bootstrap";
 import { Home, Cloud, Server, Database, Shield, Zap, Users, TrendingUp, Globe, Lock, Cpu } from "lucide-react";
 import { motion } from "framer-motion";
 import FaqAccordion from "../../components/ITsolutions/FaqAccordion";
-import "../../assets/scss/pages/cloud-innovations.scss";
+import "../../assets/scss/pages/Cloud-Innovations.scss";
 
 // Replace the import statements with these if using online images
 const cloudHeroBanner = "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80";

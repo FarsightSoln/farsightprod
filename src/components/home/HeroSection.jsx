@@ -7,6 +7,11 @@ import '../../assets/scss/pages/home.scss';
 const HeroSection = () => {
   return (
     <section className="farsight-fullbg-hero">
+      <img
+        src="/assets/images/banner/hbanner.png"
+        alt="Farsight Hero Banner"
+        className="hero-background-image"
+      />
       <div className="farsight-hero-overlay">
         <Container fluid>
           <Row className="farsight-hero-row align-items-end">

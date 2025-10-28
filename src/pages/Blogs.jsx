@@ -1,5 +1,3 @@
-"use client"
-
 import React, { useState } from "react"
 import { Container, Row, Col, Card, Badge } from "react-bootstrap"
 import { Calendar, User, Clock, ArrowRight, Search, Tag, Share2 } from "lucide-react"

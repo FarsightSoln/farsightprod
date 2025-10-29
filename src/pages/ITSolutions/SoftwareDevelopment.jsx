@@ -28,9 +28,9 @@ const softwareProcessImage = "https://images.unsplash.com/photo-1543286386-713bd
 const SoftwareDevelopment = () => {
   const faqItems = [
     {
-      question: "What Software Development Services Does Farsight Solution Provide?",
+      question: "What Software Development Services Does Farsight SolutionsProvide?",
       answer:
-        "Farsight Solution delivers comprehensive software development services encompassing custom application development, mobile application solutions, enterprise-grade web platforms, and strategic IT consulting. Our solutions are engineered to be scalable, secure, and aligned with contemporary business requirements, ensuring optimal performance and long-term sustainability.",
+        "Farsight Solutionsdelivers comprehensive software development services encompassing custom application development, mobile application solutions, enterprise-grade web platforms, and strategic IT consulting. Our solutions are engineered to be scalable, secure, and aligned with contemporary business requirements, ensuring optimal performance and long-term sustainability.",
     },
     {
       question: "What is the Expected Timeline for Software Development Projects?",
@@ -38,12 +38,12 @@ const SoftwareDevelopment = () => {
         "Project timelines vary based on scope, complexity, and specific requirements. Smaller applications typically require 4-8 weeks for development and deployment, while enterprise-level solutions may span 3-6 months or longer. Following our comprehensive requirement analysis phase, we provide detailed project timelines with clearly defined milestones and deliverables.",
     },
     {
-      question: "Which Technology Stacks Does Farsight Solution Specialize In?",
+      question: "Which Technology Stacks Does Farsight SolutionsSpecialize In?",
       answer:
         "Our engineering team possesses extensive expertise across modern technology stacks including React, Angular, Vue.js for frontend development; Node.js, Python, Java, and .NET for backend systems; and comprehensive database management using SQL, PostgreSQL, MongoDB, and Redis. We employ a strategic approach to technology selection, ensuring optimal performance, scalability, and maintainability for each unique project.",
     },
     {
-      question: "Does Farsight Solution Offer Post-Deployment Support and Maintenance?",
+      question: "Does Farsight SolutionsOffer Post-Deployment Support and Maintenance?",
       answer:
         "We provide comprehensive post-deployment support and maintenance services to ensure sustained performance and reliability. Our support framework includes proactive bug resolution, continuous performance monitoring and optimization, feature enhancements, security patches, system upgrades, and technical assistance. We offer flexible support packages tailored to your operational requirements.",
     },
@@ -220,7 +220,7 @@ const SoftwareDevelopment = () => {
                   Premier Software Development Partner for Enterprise Solutions
                 </h2>
                 <p className="software-dev-content-text mb-4">
-                  Farsight Solution stands as a distinguished software development firm, delivering innovative and cost-effective technology solutions to organizations across diverse industries worldwide. Whether you require a sophisticated SaaS platform, enterprise-grade applications, or custom software solutions, we facilitate accelerated time-to-market through secure, scalable, and performance-optimized technology implementations.
+                  Farsight Solutionsstands as a distinguished software development firm, delivering innovative and cost-effective technology solutions to organizations across diverse industries worldwide. Whether you require a sophisticated SaaS platform, enterprise-grade applications, or custom software solutions, we facilitate accelerated time-to-market through secure, scalable, and performance-optimized technology implementations.
                 </p>
                 <p className="software-dev-content-text mb-4">
                   Our multidisciplinary team of software engineers, UI/UX designers, quality assurance specialists, and project managers brings extensive domain expertise across healthcare, financial services, retail, manufacturing, and logistics sectors. We employ industry best practices and agile methodologies to deliver software solutions that precisely align with your strategic business objectives and support sustainable growth trajectories.

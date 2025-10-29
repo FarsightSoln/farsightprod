@@ -20,8 +20,8 @@ const hostingInfrastructureImage = "https://images.unsplash.com/photo-1558494949
 const WebHosting = () => {
   const faqItems = [
     {
-      question: "What types of web hosting services does Farsight Solution provide?",
-      answer: "Farsight Solution offers comprehensive hosting solutions including Shared Hosting, VPS Hosting, Dedicated Servers, Cloud Hosting, WordPress-optimized hosting, E-commerce Hosting, and Managed Hosting services tailored for businesses of all sizes and requirements."
+      question: "What types of web hosting services does Farsight Solutionsprovide?",
+      answer: "Farsight Solutionsoffers comprehensive hosting solutions including Shared Hosting, VPS Hosting, Dedicated Servers, Cloud Hosting, WordPress-optimized hosting, E-commerce Hosting, and Managed Hosting services tailored for businesses of all sizes and requirements."
     },
     {
       question: "How reliable is Farsight Solution's web hosting infrastructure?",
@@ -213,7 +213,7 @@ const WebHosting = () => {
                   Premium Web Hosting Services by Farsight Solution
                 </h2>
                 <p className="web-hosting-content-text mb-4">
-                  Farsight Solution delivers enterprise-grade web hosting solutions designed to power your online 
+                  Farsight Solutionsdelivers enterprise-grade web hosting solutions designed to power your online 
                   presence with unmatched reliability, security, and performance. Our hosting infrastructure is 
                   built on cutting-edge technology to ensure your website loads quickly and remains accessible 
                   to your visitors 24/7.

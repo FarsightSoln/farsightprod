@@ -15,11 +15,11 @@ const Home = () => {
   return (
     <div className="home-page">
       <HeroSection />
-      <InfiniteSliderSection />
       <AboutSection />
       <OurSolutionsSection />
       <CertificationsSection />
       <EmpoweringStartupsSection />
+      <InfiniteSliderSection />
       {/* <WorkProcessSection /> */}
       {/* <Testimonials /> */}
       <JoinOurTeamSection />

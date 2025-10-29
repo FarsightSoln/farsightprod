@@ -42,10 +42,10 @@ const OurSolutionsSection = () => {
         <div className="solutions-header">
           <h2 className="solutions-title">Our Solutions</h2>
           <h3 className="solutions-subtitle">
-            Comprehensive Business & IT Solutions from Falcon Futures
+            Comprehensive Business & IT Solutions from Farsight Solutions
           </h3>
           <p className="solutions-description">
-            At Falcon Futures, we provide end-to-end solutions to help your business grow — from expert consultancy and funding support to digital innovation and IT development.
+            At Farsight Solutions, we provide end-to-end solutions to help your business grow — from expert consultancy and funding support to digital innovation and IT development.
           </p>
           <Button className="solutions-button">Discover Our Solutions</Button>
         </div>

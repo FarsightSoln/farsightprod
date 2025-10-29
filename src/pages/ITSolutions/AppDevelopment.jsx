@@ -28,8 +28,8 @@ const appProcessImage = "https://images.unsplash.com/photo-1543286386-713bdd548d
 const AppDevelopment = () => {
   const faqItems = [
     {
-      question: 'What types of app development services does Farsight Solution provide?',
-      answer: 'Farsight Solution provides complete mobile app development for Android and iOS platforms. Our services include UI/UX design, native and hybrid app development, backend API integration, testing, deployment, and post-launch support. We build custom apps that align with your business objectives.'
+      question: 'What types of app development services does Farsight Solutionsprovide?',
+      answer: 'Farsight Solutionsprovides complete mobile app development for Android and iOS platforms. Our services include UI/UX design, native and hybrid app development, backend API integration, testing, deployment, and post-launch support. We build custom apps that align with your business objectives.'
     },
     {
       question: 'How long does it take to build a mobile app with Farsight Solution?',
@@ -37,7 +37,7 @@ const AppDevelopment = () => {
     },
     {
       question: 'Do you provide app maintenance and updates?',
-      answer: 'Yes, Farsight Solution ensures your app stays up to date with regular updates, bug fixes, performance optimization, security patches, and feature enhancements.'
+      answer: 'Yes, Farsight Solutionsensures your app stays up to date with regular updates, bug fixes, performance optimization, security patches, and feature enhancements.'
     },
     {
       question: 'How do you ensure app security?',
@@ -211,7 +211,7 @@ const AppDevelopment = () => {
                   Leading Mobile App Development Services
                 </h2>
                 <p className="app-content-text mb-4">
-                  Farsight Solution is a trusted mobile app development company offering scalable,
+                  Farsight Solutions a trusted mobile app development company offering scalable,
                   user-friendly, and innovative applications for startups, enterprises, and growing businesses.
                   Our expertise ensures seamless user experiences, high performance, and robust security standards.
                 </p>

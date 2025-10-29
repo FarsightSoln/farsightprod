@@ -12,19 +12,9 @@ import {
   Users,
   Briefcase,
 } from "lucide-react";
-// Import images
-// import legalHeroBanner from "../../assets/images/legal-hero-banner.jpg";
-// import benefitCardImage from "../../assets/images/legal-benefit-card.jpg";
-// import approachCardImage from "../../assets/images/legal-approach-card.jpg";
-// import serviceCardImage from "../../assets/images/legal-service-card.jpg";
-// import supportCardImage from "../../assets/images/legal-support-card.jpg";
 
-// Replace the import statements with these if using online images
+// Hero background image only
 const legalHeroBanner = "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80";
-const benefitCardImage = "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80";
-const approachCardImage = "https://jgbd.in/wp-content/uploads/2023/09/General-Practice-1024x683-1-768x512.jpg";
-const serviceCardImage = "https://jgbd.in/wp-content/uploads/2023/09/General-Practice-1024x683-1-768x512.jpg";
-const supportCardImage = "https://jgbd.in/wp-content/uploads/2023/09/General-Practice-1024x683-1-768x512.jpg";
 
 import "../../assets/scss/pages/legal-assistance.scss";
 
@@ -33,26 +23,22 @@ const LegalAssistance = () => {
     {
       icon: Shield,
       title: "Mitigation of Legal Risks",
-      desc: "Comprehensive legal risk assessment and proactive measures to safeguard your business from regulatory non-compliance and potential litigation.",
-      image: benefitCardImage
+      desc: "Comprehensive legal risk assessment and proactive measures to safeguard your business from regulatory non-compliance and potential litigation."
     },
     {
       icon: TrendingUp,
       title: "Enhanced Operational Efficiency",
-      desc: "Streamlined compliance processes and regulatory frameworks that optimize business operations while ensuring adherence to statutory requirements.",
-      image: benefitCardImage
+      desc: "Streamlined compliance processes and regulatory frameworks that optimize business operations while ensuring adherence to statutory requirements."
     },
     {
       icon: Target,
       title: "Cost-Effective Compliance",
-      desc: "Strategic legal planning to prevent expensive litigation, penalties, and regulatory sanctions through proactive compliance management.",
-      image: benefitCardImage
+      desc: "Strategic legal planning to prevent expensive litigation, penalties, and regulatory sanctions through proactive compliance management."
     },
     {
       icon: Building2,
       title: "Strengthened Market Position",
-      desc: "Establish credibility and trust with stakeholders, investors, and regulatory authorities through robust compliance frameworks.",
-      image: benefitCardImage
+      desc: "Establish credibility and trust with stakeholders, investors, and regulatory authorities through robust compliance frameworks."
     },
   ]
 
@@ -60,32 +46,27 @@ const LegalAssistance = () => {
     { 
       num: 1, 
       title: "Initial Legal Audit & Assessment", 
-      desc: "Comprehensive evaluation of your business structure, operations, and existing compliance status to identify gaps and risks.",
-      image: approachCardImage
+      desc: "Comprehensive evaluation of your business structure, operations, and existing compliance status to identify gaps and risks."
     },
     { 
       num: 2, 
       title: "Tailored Compliance Strategy", 
-      desc: "Development of customized legal and regulatory frameworks aligned with your industry, business model, and growth objectives.",
-      image: approachCardImage
+      desc: "Development of customized legal and regulatory frameworks aligned with your industry, business model, and growth objectives."
     },
     { 
       num: 3, 
       title: "Implementation & Monitoring", 
-      desc: "Systematic execution of compliance protocols with continuous monitoring to ensure adherence to evolving regulatory requirements.",
-      image: approachCardImage
+      desc: "Systematic execution of compliance protocols with continuous monitoring to ensure adherence to evolving regulatory requirements."
     },
     { 
       num: 4, 
       title: "Expert Legal Consultation", 
-      desc: "Access to experienced legal professionals providing strategic guidance on complex regulatory and compliance matters.",
-      image: approachCardImage
+      desc: "Access to experienced legal professionals providing strategic guidance on complex regulatory and compliance matters."
     },
     { 
       num: 5, 
       title: "Documentation & Regulatory Filing", 
-      desc: "Professional management of statutory documentation, registrations, licenses, and periodic regulatory submissions.",
-      image: approachCardImage
+      desc: "Professional management of statutory documentation, registrations, licenses, and periodic regulatory submissions."
     },
   ]
 
@@ -93,38 +74,32 @@ const LegalAssistance = () => {
     {
       icon: Briefcase,
       title: "Business Registration & Statutory Compliance",
-      desc: "End-to-end assistance in company incorporation, GST registration, MSME certification, and all statutory registrations required under Indian law.",
-      image: serviceCardImage
+      desc: "End-to-end assistance in company incorporation, GST registration, MSME certification, and all statutory registrations required under Indian law."
     },
     {
       icon: Users,
       title: "Labour & Employment Law Advisory",
-      desc: "Comprehensive compliance with the Code on Wages, Industrial Relations, Social Security, and Occupational Safety, Health & Working Conditions.",
-      image: serviceCardImage
+      desc: "Comprehensive compliance with labor regulations including wages, industrial relations, social security, and occupational safety standards."
     },
     {
       icon: FileText,
       title: "Contract Management & Legal Vetting",
-      desc: "Professional drafting, review, and vetting of commercial agreements, vendor contracts, employment agreements, and partnership deeds.",
-      image: serviceCardImage
+      desc: "Professional drafting, review, and vetting of commercial agreements, vendor contracts, employment agreements, and partnership deeds."
     },
     {
       icon: Building2,
       title: "Corporate Governance & Secretarial Services",
-      desc: "Compliance with Companies Act provisions, board governance, statutory meetings, annual filings, and maintenance of statutory registers.",
-      image: serviceCardImage
+      desc: "Compliance with Companies Act provisions, board governance, statutory meetings, annual filings, and maintenance of statutory registers."
     },
     {
       icon: AlertCircle,
       title: "Tax Planning & Regulatory Advisory",
-      desc: "Strategic tax structuring, GST compliance, income tax advisory, and guidance on regulatory frameworks including FEMA, RBI, and sector-specific regulations.",
-      image: serviceCardImage
+      desc: "Strategic tax structuring, GST compliance, income tax advisory, and guidance on regulatory frameworks including sector-specific regulations."
     },
     {
       icon: CheckCircle,
       title: "Licensing & Government Liaison",
-      desc: "Facilitation of business licenses, regulatory approvals, environmental clearances, and liaison with government departments and statutory authorities.",
-      image: serviceCardImage
+      desc: "Facilitation of business licenses, regulatory approvals, environmental clearances, and liaison with government departments and statutory authorities."
     },
   ]
 
@@ -132,38 +107,32 @@ const LegalAssistance = () => {
     {
       icon: Lock,
       title: "Regulatory Intelligence & Updates",
-      desc: "Timely notifications and analysis of amendments in central and state legislation, notifications, circulars, and policy changes affecting your business.",
-      image: supportCardImage
+      desc: "Timely notifications and analysis of amendments in central and state legislation, notifications, circulars, and policy changes affecting your business."
     },
     {
       icon: AlertCircle,
       title: "Audit Support & Regulatory Filings",
-      desc: "Professional assistance in statutory audits, departmental inspections, preparation of compliance documentation, and timely regulatory submissions.",
-      image: supportCardImage
+      desc: "Professional assistance in statutory audits, departmental inspections, preparation of compliance documentation, and timely regulatory submissions."
     },
     {
       icon: CheckCircle,
       title: "Continuous Legal Advisory for MSMEs & Startups",
-      desc: "Year-round access to legal consultation addressing the dynamic compliance requirements of growing businesses and startups.",
-      image: supportCardImage
+      desc: "Year-round access to legal consultation addressing the dynamic compliance requirements of growing businesses and startups."
     },
     {
       icon: Briefcase,
       title: "Integrated Business Solutions",
-      desc: "Seamless coordination of legal compliance with financial services, tax planning, business advisory, and growth strategies.",
-      image: supportCardImage
+      desc: "Seamless coordination of legal compliance with financial services, tax planning, business advisory, and growth strategies."
     },
     {
       icon: FileText,
       title: "Certification & Tender Readiness",
-      desc: "Comprehensive support for ISO certifications, startup recognition, government tender participation, and subsidy applications.",
-      image: supportCardImage
+      desc: "Comprehensive support for ISO certifications, startup recognition, government tender participation, and subsidy applications."
     },
     {
       icon: Users,
       title: "Professional Legal Representation",
-      desc: "Expert representation before regulatory authorities, tribunals, and administrative bodies for compliance matters and dispute resolution.",
-      image: supportCardImage
+      desc: "Expert representation before regulatory authorities, tribunals, and administrative bodies for compliance matters and dispute resolution."
     },
   ]
 
@@ -184,7 +153,7 @@ const LegalAssistance = () => {
                   Comprehensive Legal & Compliance Solutions for Indian Businesses
                 </h1>
                 <p className="la-hero-desc lead mb-5">
-                  Farsight Solution LLP delivers expert legal and regulatory compliance services designed to protect your business interests and ensure full adherence to Indian statutory requirements.
+                  Farsight Solutions delivers expert legal and regulatory compliance services designed to protect your business interests and ensure full adherence to Indian statutory requirements.
                 </p>
                 <div className="d-flex gap-3 justify-content-center flex-wrap">
                   <Button className="la-btn-primary btn-lg">Schedule Consultation</Button>
@@ -213,15 +182,9 @@ const LegalAssistance = () => {
             {benefitCards.map((card, idx) => (
               <Col md={6} lg={3} key={idx}>
                 <Card className="la-benefit-card h-100 shadow-sm border-0">
-                  <Card.Img 
-                    variant="top" 
-                    src={card.image} 
-                    className="la-card-img"
-                    alt={card.title}
-                  />
                   <Card.Body className="text-center p-4">
-                    <div className="la-card-icon mb-3">
-                      <card.icon size={32} />
+                    <div className="la-card-icon mb-4">
+                      <card.icon size={48} />
                     </div>
                     <h5 className="la-card-title mb-3">{card.title}</h5>
                     <p className="la-card-desc">{card.desc}</p>
@@ -243,7 +206,7 @@ const LegalAssistance = () => {
           <div className="text-center mb-5">
             <h2 className="la-section-title mb-4">Our Systematic Approach to Legal Compliance</h2>
             <p className="la-section-subtitle lead mb-4">
-              Farsight Solution LLP employs a structured, intelligence-driven methodology tailored to the specific requirements of Indian businesses.
+              Farsight Solutions employs a structured, intelligence-driven methodology tailored to the specific requirements of Indian businesses.
             </p>
             <div className="la-highlight-text bg-white p-3 rounded d-inline-block">
               Our Five-Phase Compliance Framework
@@ -254,12 +217,6 @@ const LegalAssistance = () => {
             {approachSteps.map((step, idx) => (
               <Col md={6} lg={4} key={idx}>
                 <Card className="la-approach-card h-100 shadow-sm border-0">
-                  <Card.Img 
-                    variant="top" 
-                    src={step.image} 
-                    className="la-card-img"
-                    alt={step.title}
-                  />
                   <Card.Body className="text-center p-4 position-relative">
                     <div className="la-step-number">{step.num}</div>
                     <h5 className="la-approach-title mb-3">{step.title}</h5>
@@ -282,7 +239,7 @@ const LegalAssistance = () => {
           <div className="text-center mb-5">
             <h2 className="la-section-title mb-4">Comprehensive Legal & Compliance Services Portfolio</h2>
             <p className="la-section-subtitle lead mb-4">
-              Farsight Solution LLP provides end-to-end legal and regulatory compliance solutions customized to your business sector, operational structure, and regulatory environment.
+              Farsight Solutions provides end-to-end legal and regulatory compliance solutions customized to your business sector, operational structure, and regulatory environment.
             </p>
             <div className="la-highlight-text bg-light p-3 rounded d-inline-block">
               Core Legal & Regulatory Compliance Services
@@ -293,15 +250,9 @@ const LegalAssistance = () => {
             {services.map((service, idx) => (
               <Col md={6} lg={4} key={idx}>
                 <Card className="la-service-card h-100 shadow-sm border-0">
-                  <Card.Img 
-                    variant="top" 
-                    src={service.image} 
-                    className="la-card-img"
-                    alt={service.title}
-                  />
                   <Card.Body className="text-center p-4">
-                    <div className="la-card-icon mb-3">
-                      <service.icon size={32} />
+                    <div className="la-card-icon mb-4">
+                      <service.icon size={48} />
                     </div>
                     <h5 className="la-card-title mb-3">{service.title}</h5>
                     <p className="la-card-desc">{service.desc}</p>
@@ -321,9 +272,9 @@ const LegalAssistance = () => {
       <section className="la-section-light py-5 bg-light">
         <Container>
           <div className="text-center mb-5">
-            <h2 className="la-section-title mb-4">How Farsight Solution LLP Ensures Regulatory Compliance</h2>
+            <h2 className="la-section-title mb-4">How Farsight Solutions Ensures Regulatory Compliance</h2>
             <p className="la-section-subtitle lead mb-4">
-              When you engage Farsight Solution LLP, you gain access to a dedicated team of legal and compliance professionals committed to maintaining your business in a state of continuous regulatory readiness.
+              When you engage Farsight Solutions, you gain access to a dedicated team of legal and compliance professionals committed to maintaining your business in a state of continuous regulatory readiness.
             </p>
             <div className="la-highlight-text bg-white p-3 rounded d-inline-block">
               Our Comprehensive Compliance Support Includes
@@ -334,15 +285,9 @@ const LegalAssistance = () => {
             {supportServices.map((service, idx) => (
               <Col md={6} lg={4} key={idx}>
                 <Card className="la-support-card h-100 shadow-sm border-0">
-                  <Card.Img 
-                    variant="top" 
-                    src={service.image} 
-                    className="la-card-img"
-                    alt={service.title}
-                  />
                   <Card.Body className="text-center p-4">
-                    <div className="la-card-icon mb-3">
-                      <service.icon size={32} />
+                    <div className="la-card-icon mb-4">
+                      <service.icon size={48} />
                     </div>
                     <h5 className="la-card-title mb-3">{service.title}</h5>
                     <p className="la-card-desc">{service.desc}</p>
@@ -353,7 +298,7 @@ const LegalAssistance = () => {
           </Row>
 
           <div className="text-center mt-5">
-            <Button className="la-btn-primary btn-lg">Partner with Farsight Solution LLP</Button>
+            <Button className="la-btn-primary btn-lg">Partner with Farsight Solutions</Button>
           </div>
         </Container>
       </section>

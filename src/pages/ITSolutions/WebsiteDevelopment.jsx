@@ -19,9 +19,9 @@ const websiteProcessImage = "https://images.unsplash.com/photo-1547658719-da2b51
 const WebsiteDevelopment = () => {
   const faqItems = [
     {
-      question: "What Website Development Services Does Farsight Solution Offer?",
+      question: "What Website Development Services Does Farsight SolutionsOffer?",
       answer:
-        "Farsight Solution provides comprehensive website development services including custom website design, e-commerce solutions, CMS development, responsive web design, and website maintenance. We create visually appealing, user-friendly, and high-performing websites that drive business growth.",
+        "Farsight Solutionsprovides comprehensive website development services including custom website design, e-commerce solutions, CMS development, responsive web design, and website maintenance. We create visually appealing, user-friendly, and high-performing websites that drive business growth.",
     },
     {
       question: "How long does a Website Development Project Take?",
@@ -29,7 +29,7 @@ const WebsiteDevelopment = () => {
         "The timeline depends on project complexity. Basic brochure websites may take 2-4 weeks, while complex e-commerce platforms can take 6-12 weeks. We provide a detailed project timeline after the initial consultation and requirement analysis.",
     },
     {
-      question: "Which Technologies Does Farsight Solution Use for Web Development?",
+      question: "Which Technologies Does Farsight SolutionsUse for Web Development?",
       answer:
         "Our team works with modern technologies including React, Angular, Vue.js, HTML5, CSS3, JavaScript, PHP, WordPress, Shopify, and various CMS platforms. We choose the best technology stack based on your specific requirements.",
     },
@@ -212,7 +212,7 @@ const WebsiteDevelopment = () => {
                   Professional Website Development Company
                 </h2>
                 <p className="website-dev-content-text mb-4">
-                  Farsight Solution is a leading website development company specializing in creating 
+                  Farsight Solutions a leading website development company specializing in creating 
                   innovative, responsive, and high-converting websites for businesses of all sizes. 
                   Whether you need a corporate website, e-commerce platform, or custom web application, 
                   we deliver solutions that enhance your online presence and drive business growth.

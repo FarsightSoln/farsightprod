@@ -9,7 +9,7 @@ const EmpoweringStartupsSection = () => {
       icon: "https://cdn-icons-png.flaticon.com/512/1040/1040230.png", // search/analysis
       title: "Understanding Your Vision",
       description:
-        "At Falcon Futures, we begin by analyzing your business goals, challenges, and future vision to design a growth-focused plan.",
+        "At Farsight Solutions, we begin by analyzing your business goals, challenges, and future vision to design a growth-focused plan.",
     },
     {
       icon: "https://cdn-icons-png.flaticon.com/512/1041/1041916.png", // strategy
@@ -71,7 +71,7 @@ const EmpoweringStartupsSection = () => {
           transition={{ duration: 0.8, delay: 0.3 }}
           viewport={{ once: true }}
         >
-          {"Our Working Process at Falcon Futures".split("").map((char, index) => (
+          {"Our Working Process at Farsight Solutions".split("").map((char, index) => (
             <motion.span
               key={index}
               initial={{ opacity: 0 }}

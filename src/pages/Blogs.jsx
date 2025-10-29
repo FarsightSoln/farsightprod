@@ -400,7 +400,7 @@ const Blogs = () => {
                   </h1>
                   <p className="blogs-hero-subtitle lead mb-5">
                     Stay informed with the latest trends, insights, and best practices in technology, 
-                    business development, and digital innovation from Farsight Solution experts.
+                    business development, and digital innovation from Farsight Solutionsexperts.
                   </p>
                 </motion.div>
               </Col>

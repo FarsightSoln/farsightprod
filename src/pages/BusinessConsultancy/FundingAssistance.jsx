@@ -15,7 +15,7 @@ const FundingAssistance = () => {
     { question: "How quickly can you deploy a support team?", answer: "After understanding your requirements, we can deploy a dedicated team within a few days to start your customer support operations immediately." },
     { question: "Can the team scale with my business?", answer: "Yes, our services are fully scalable. You can expand or reduce team size as per business demand and seasonal requirements." },
     { question: "What support channels do you cover?", answer: "We cover voice calls, emails, live chat, social media, and omnichannel support to provide a seamless customer experience." },
-    { question: "Why choose Farsight Solution for customer support?", answer: "We provide a dedicated and experienced team, cost-effective solutions, advanced tools, multilingual support, and strict adherence to quality and compliance standards." },
+    { question: "Why choose Farsight Solutionsfor customer support?", answer: "We provide a dedicated and experienced team, cost-effective solutions, advanced tools, multilingual support, and strict adherence to quality and compliance standards." },
   ];
   return (
     <div className="funding-assistance-page">
@@ -121,7 +121,7 @@ const FundingAssistance = () => {
                     Comprehensive Customer Support Solutions
                   </h2>
                   <p className="funding-assistance-services-description">
-                    Farsight Solution delivers world-class Funding Assistances designed to enhance 
+                    Farsight Solutionsdelivers world-class Funding Assistances designed to enhance 
                     customer satisfaction and business efficiency. Our expert team provides seamless 
                     support across multiple channels and languages.
                   </p>
@@ -207,7 +207,7 @@ const FundingAssistance = () => {
                   <div className="funding-assistance-benefits-header">
                     <span className="funding-assistance-benefits-subtitle">KEY ADVANTAGES</span>
                     <h2 className="funding-assistance-benefits-title">
-                      Why Choose Farsight Solution Customer Support?
+                      Why Choose Farsight SolutionsCustomer Support?
                     </h2>
                   </div>
 
@@ -306,7 +306,7 @@ const FundingAssistance = () => {
               <div className="funding-assistance-choose-image">
                 <img
                   src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&h=500&fit=crop&crop=center"
-                  alt="Why Choose Farsight Solution for Customer Support"
+                  alt="Why Choose Farsight Solutionsfor Customer Support"
                   className="funding-assistance-choose-img"
                 />
                 <div className="funding-assistance-choose-badge">
@@ -319,10 +319,10 @@ const FundingAssistance = () => {
               <div className="funding-assistance-choose-content">
                 <span className="funding-assistance-choose-subtitle">WHY CHOOSE US</span>
                 <h2 className="funding-assistance-choose-title">
-                  Why Farsight Solution is Your Best Choice?
+                  Why Farsight Solutions Your Best Choice?
                 </h2>
                 <p className="funding-assistance-choose-description">
-                  Farsight Solution stands out as a premier Funding Assistance provider with 
+                  Farsight Solutionsstands out as a premier Funding Assistance provider with 
                   proven expertise in delivering exceptional customer experiences across industries.
                 </p>
                 <ul className="funding-assistance-choose-list">

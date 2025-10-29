@@ -4,7 +4,9 @@
   background-position: center;
   background-repeat: no-repeat;
   padding: 40px 0;
-  max-height: 70vh;
+  max-height: 60vh;
+  display: flex;
+  align-items: center;
 }
 
 .ca-hero-title {
@@ -12,12 +14,14 @@
   font-weight: 700;
   margin-bottom: 20px;
   line-height: 1.2;
+  color: #ffffff;
 }
 
 .ca-hero-subtitle {
   font-size: 24px;
   font-weight: 300;
   margin-bottom: 30px;
+  color: #ffffff;
 }
 
 .ca-hero-description {
@@ -25,6 +29,7 @@
   font-weight: 300;
   line-height: 1.6;
   margin-bottom: 40px;
+  color: #ffffff;
 }
 
 // Buttons
@@ -37,6 +42,7 @@
   transition: all 0.3s ease;
   border: none;
   font-size: 16px;
+  cursor: pointer;
 }
 
 .ca-btn-primary {
@@ -89,8 +95,9 @@
 .ca-highlight {
   display: inline-flex;
   align-items: center;
-  padding: 10px 20px;
-  border-radius: 6px;
+  padding: 12px 24px;
+  border-radius: 8px;
+  border-left: 4px solid #bf5b01;
 }
 
 .ca-highlight-badge {
@@ -110,46 +117,50 @@
   transition: all 0.3s ease;
   border-radius: 12px;
   overflow: hidden;
+  border: 1px solid #e9ecef;
+  background: #ffffff;
 }
 
 .ca-feature-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-}
-
-.ca-card-img {
-  height: 200px;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-}
-
-.ca-feature-card:hover .ca-card-img {
-  transform: scale(1.05);
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(43, 106, 161, 0.15);
+  border-color: #2b6aa1;
 }
 
 .ca-feature-icon {
   color: #2b6aa1;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
+  padding: 16px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .ca-feature-title {
   font-size: 18px;
   font-weight: 600;
   color: #2b6aa1;
-  margin-bottom: 15px;
+  margin-bottom: 16px;
   line-height: 1.4;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .ca-feature-description {
   font-size: 14px;
-  font-weight: 300;
-  color: #666666;
+  font-weight: 400;
+  color: #555555;
   line-height: 1.6;
+  margin-bottom: 0;
 }
 
 // Utility Classes
-.min-vh-80 {
-  min-height: 80vh;
+.min-vh-60 {
+  min-height: 60vh;
 }
 
 .text-white {
@@ -160,7 +171,33 @@
   background-color: #f8f9fa;
 }
 
-// Responsive
+.bg-white {
+  background-color: #ffffff;
+}
+
+// Section specific backgrounds
+.ca-msme-section {
+  background-color: #ffffff;
+}
+
+.ca-startup-section {
+  background-color: #f8f9fa;
+}
+
+.ca-other-section {
+  background-color: #ffffff;
+}
+
+.ca-egniol-section {
+  background-color: #f8f9fa;
+}
+
+// Section Footer
+.ca-section-footer {
+  margin-top: 60px;
+}
+
+// Responsive Design
 @media (max-width: 768px) {
   .ca-hero-title {
     font-size: 32px;
@@ -170,13 +207,54 @@
     font-size: 20px;
   }
   
+  .ca-hero-description {
+    font-size: 16px;
+  }
+  
   .ca-section-title {
     font-size: 28px;
+  }
+  
+  .ca-section {
+    padding: 60px 0;
   }
   
   .ca-hero-buttons .ca-btn {
     display: block;
     width: 100%;
     margin-bottom: 15px;
+    margin-right: 0;
+  }
+  
+  .ca-feature-title {
+    min-height: auto;
+    font-size: 16px;
+  }
+  
+  .ca-feature-icon {
+    padding: 12px;
+  }
+}
+
+@media (max-width: 576px) {
+  .ca-hero-banner {
+    padding: 60px 0;
+    min-height: 60vh;
+  }
+  
+  .ca-hero-title {
+    font-size: 28px;
+  }
+  
+  .ca-hero-subtitle {
+    font-size: 18px;
+  }
+  
+  .ca-section-title {
+    font-size: 24px;
+  }
+  
+  .ca-section {
+    padding: 40px 0;
   }
 }

@@ -24,12 +24,12 @@ import {
 
 // CRM images using online sources
 const crmHeroBanner = "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80";
-const leadManagementImage = "https://images.unsplash.com/photo-1551836026-d5cbc2f4c4b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80";
+const leadManagementImage = "https://www.practiceguru.pro/images/startup-india.jpg";
 const contactManagementImage = "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80";
 const salesPipelineImage = "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80";
 const customerSupportImage = "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80";
 const analyticsDashboardImage = "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80";
-const securityFeaturesImage = "https://images.unsplash.com/photo-1563010047-9bb6e0c6aff6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80";
+const securityFeaturesImage = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvunrzmd6U9JOnKVD2BUOEuMAkPEXztSp6kFZ1HsfW08KMUmeoaFbIr2P6re9eskcblx4&usqp=CAU";
 const customizationImage = "https://images.unsplash.com/photo-1543286386-713bdd548da4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80";
 const farsightOfficeImage = "https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80";
 
@@ -280,7 +280,7 @@ const CRM = () => {
                   Complete Customer Relationship Management Solution
                 </h2>
                 <p className="crm-section-subtitle lead mb-4">
-                  Customer Maximizer by <strong>Farsight Solution LLP</strong> is more than just a CRM tool — 
+                  Customer Maximizer by <strong>Farsight SolutionsLLP</strong> is more than just a CRM tool — 
                   it's a comprehensive customer success platform.
                 </p>
                 <p className="crm-description mb-4">
@@ -512,7 +512,7 @@ const CRM = () => {
         </Container>
       </section>
 
-      {/* About Farsight Solution LLP */}
+      {/* About Farsight SolutionsLLP */}
       <section className="crm-section crm-about-section py-5 bg-light">
         <Container>
           <Row className="align-items-center">
@@ -520,7 +520,7 @@ const CRM = () => {
               <div className="crm-about-visual text-center">
                 <img 
                   src={farsightOfficeImage} 
-                  alt="Farsight Solution LLP" 
+                  alt="Farsight SolutionsLLP" 
                   className="crm-about-img rounded-3 shadow"
                 />
               </div>
@@ -528,9 +528,9 @@ const CRM = () => {
             
             <Col lg={6}>
               <div className="crm-about-content">
-                <h2 className="crm-section-title mb-4">About Farsight Solution LLP</h2>
+                <h2 className="crm-section-title mb-4">About Farsight SolutionsLLP</h2>
                 <p className="crm-about-description mb-4">
-                  Farsight Solution LLP is a premier business consulting and technology solutions provider 
+                  Farsight SolutionsLLP is a premier business consulting and technology solutions provider 
                   based in India. With years of expertise in enterprise software development and business 
                   process optimization, we deliver innovative solutions that drive sales growth and customer satisfaction.
                 </p>

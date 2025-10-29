@@ -19,7 +19,7 @@ const digitalMarketingImage = "https://images.unsplash.com/photo-1551288049-bebd
 const seoServiceImage = "https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80";
 const socialMediaImage = "https://images.unsplash.com/photo-1611605698335-8b1569810432?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80";
 const ppcServiceImage = "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80";
-const whatsappMarketingImage = "https://images.unsplash.com/photo-1563010047-9bb6e0c6aff6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80";
+const whatsappMarketingImage = "https://growvid.com/wp-content/uploads/2023/08/whatsapp-marketing.jpg";
 const crmServiceImage = "https://images.unsplash.com/photo-1552664688-cf412ec27db2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80";
 
 import "../../assets/scss/pages/marketing-assistance.scss";
@@ -139,7 +139,6 @@ const MarketingAssistance = () => {
           <Row className="g-4">
             <Col lg={4} className="mb-4">
               <div className="ma-left-content text-center text-lg-start">
-                <div className="ma-number">03</div>
                 <h3 className="ma-service-title">Business Expansion Services</h3>
                 <div className="ma-title-underline mx-auto mx-lg-0" />
                 

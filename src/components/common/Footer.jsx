@@ -57,7 +57,7 @@ const Footer = () => {
                   <img src={logo} alt="Farsight Solutions" className="logo-img" />
                 </div>
                 <p className="company-description">
-                  Farsight Solution is a one-stop partner for startups, MSMEs, and growing enterprises. We provide complete business consulting and IT solutions. From company incorporation, legal compliance, certification, and funding support to digital transformation, CRM implementation, and growth strategy.
+                  Farsight Solutions a one-stop partner for startups, MSMEs, and growing enterprises. We provide complete business consulting and IT solutions. From company incorporation, legal compliance, certification, and funding support to digital transformation, CRM implementation, and growth strategy.
                 </p>
               </div>
             </Col>

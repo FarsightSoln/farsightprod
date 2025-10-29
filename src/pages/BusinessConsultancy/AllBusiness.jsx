@@ -47,8 +47,8 @@ const businessHeroBanner = "https://images.unsplash.com/photo-1556761175-b413da4
 // Business Setup Images
 const companyRegistrationImage = "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80";
 const msmeRegistrationImage = "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80";
-const llpRegistrationImage = "https://images.unsplash.com/photo-1563010047-9bb6e0c6aff6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80";
-const startupIndiaImage = "https://images.unsplash.com/photo-1551836026-d5cbc2f4c4b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80";
+const llpRegistrationImage = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvunrzmd6U9JOnKVD2BUOEuMAkPEXztSp6kFZ1HsfW08KMUmeoaFbIr2P6re9eskcblx4&usqp=CAU";
+const startupIndiaImage = "https://www.practiceguru.pro/images/startup-india.jpg";
 const taxExemptionImage = "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80";
 const gemRegistrationImage = "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80";
 const businessLandImage = "https://images.unsplash.com/photo-1541976590-713941681591?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80";
@@ -56,25 +56,25 @@ const businessLandImage = "https://images.unsplash.com/photo-1541976590-71394168
 // Business Growth Images
 const governmentGrantsImage = "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80";
 const nbfcLoansImage = "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80";
-const governmentLoansImage = "https://images.unsplash.com/photo-1551836026-d5cbc2f4c4b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80";
+const governmentLoansImage = "https://www.practiceguru.pro/images/startup-india.jpg";
 const equityFundingImage = "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80";
 const businessMentorshipImage = "https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80";
 const pitchDecksImage = "https://images.unsplash.com/photo-1543286386-713bdd548da4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80";
-const mergersAcquisitionsImage = "https://images.unsplash.com/photo-1565689228866-1d7db59f6bad?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80";
+const mergersAcquisitionsImage = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_dA_2OS70Axn61E7pEqDiCCyZPSZT9RRU8g&s";
 
 // Business Expansion Images
 const websiteDevelopmentImage = "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80";
-const seoServiceImage = "https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80";
+const seoServiceImage = "https://cdn.pixabay.com/photo/2020/01/24/09/46/seo-4789789_1280.png";
 const digitalMarketingImage = "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80";
 const socialMediaMarketingImage = "https://images.unsplash.com/photo-1611605698335-8b1569810432?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80";
 const performanceMarketingImage = "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80";
-const whatsappMarketingImage = "https://images.unsplash.com/photo-1563010047-9bb6e0c6aff6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80";
+const whatsappMarketingImage = "https://www.moengage.com/wp-content/uploads/whatsapp-blog-02-scaled.webp";
 const crmSolutionsImage = "https://images.unsplash.com/photo-1552664688-cf412ec27db2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80";
 
 // Business Protection Images
 const companyLawImage = "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80";
 const trademarkImage = "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80";
-const rocFilingsImage = "https://images.unsplash.com/photo-1556761175-4b46ac572b81?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80";
+const rocFilingsImage = "https://www.registrationkraft.com/wp-content/uploads/2024/03/FTR-IMGROC.webp";
 const gstTaxImage = "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80";
 const pfEsiImage = "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80";
 const legalAgreementsImage = "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80";
@@ -379,7 +379,7 @@ const AllBusiness = () => {
                   className={`ab-tab-btn w-100 ${activeTab === "setup" ? "ab-tab-active" : ""}`}
                   onClick={() => setActiveTab("setup")}
                 >
-                  <span className="ab-tab-number">01</span>
+                  <span className="ab-tab-number"></span>
                   <span className="ab-tab-label">Business Setup</span>
                 </Button>
               </Col>
@@ -388,7 +388,7 @@ const AllBusiness = () => {
                   className={`ab-tab-btn w-100 ${activeTab === "growth" ? "ab-tab-active" : ""}`}
                   onClick={() => setActiveTab("growth")}
                 >
-                  <span className="ab-tab-number">02</span>
+                  <span className="ab-tab-number"></span>
                   <span className="ab-tab-label">Business Growth</span>
                 </Button>
               </Col>
@@ -397,7 +397,7 @@ const AllBusiness = () => {
                   className={`ab-tab-btn w-100 ${activeTab === "expansion" ? "ab-tab-active" : ""}`}
                   onClick={() => setActiveTab("expansion")}
                 >
-                  <span className="ab-tab-number">03</span>
+                  <span className="ab-tab-number"></span>
                   <span className="ab-tab-label">Business Expansion</span>
                 </Button>
               </Col>
@@ -406,7 +406,7 @@ const AllBusiness = () => {
                   className={`ab-tab-btn w-100 ${activeTab === "protection" ? "ab-tab-active" : ""}`}
                   onClick={() => setActiveTab("protection")}
                 >
-                  <span className="ab-tab-number">04</span>
+                  <span className="ab-tab-number"></span>
                   <span className="ab-tab-label">Business Protection</span>
                 </Button>
               </Col>

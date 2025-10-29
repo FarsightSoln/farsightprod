@@ -19,9 +19,9 @@ const cloudProcessImage = "https://images.unsplash.com/photo-1547658719-da2b5116
 const CloudInnovations = () => {
   const faqItems = [
     {
-      question: "What Cloud Services Does Farsight Solution Offer?",
+      question: "What Cloud Services Does Farsight SolutionsOffer?",
       answer:
-        "Farsight Solution provides comprehensive cloud services including cloud migration, infrastructure setup, cloud security, hybrid cloud solutions, cloud analytics, and managed cloud services. We help businesses leverage cloud technology for innovation and growth.",
+        "Farsight Solutionsprovides comprehensive cloud services including cloud migration, infrastructure setup, cloud security, hybrid cloud solutions, cloud analytics, and managed cloud services. We help businesses leverage cloud technology for innovation and growth.",
     },
     {
       question: "How long does a Cloud Migration Project Take?",
@@ -29,7 +29,7 @@ const CloudInnovations = () => {
         "The timeline depends on the complexity of your infrastructure. Small to medium migrations typically take 4-8 weeks, while enterprise-level migrations can take 12-24 weeks. We provide a detailed migration plan after initial assessment.",
     },
     {
-      question: "Which Cloud Platforms Does Farsight Solution Support?",
+      question: "Which Cloud Platforms Does Farsight SolutionsSupport?",
       answer:
         "Our team works with all major cloud platforms including AWS, Microsoft Azure, Google Cloud Platform, and IBM Cloud. We help you choose the right platform based on your business needs and technical requirements.",
     },
@@ -212,7 +212,7 @@ const CloudInnovations = () => {
                   Leading Cloud Innovation Company
                 </h2>
                 <p className="cloud-innovations-content-text mb-4">
-                  Farsight Solution is at the forefront of cloud innovation, helping businesses 
+                  Farsight Solutions at the forefront of cloud innovation, helping businesses 
                   harness the power of cloud computing to drive digital transformation. Our 
                   comprehensive cloud services enable organizations to scale, innovate, and 
                   compete in today's dynamic business landscape.

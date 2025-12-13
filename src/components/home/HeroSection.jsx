@@ -5,11 +5,19 @@ import { motion } from 'framer-motion';
 import '../../assets/scss/pages/home.scss';
 
 const HeroSection = () => {
-  const [isMobile, setIsMobile] = React.useState(window.innerWidth <= 768);
+  const [bannerImage, setBannerImage] = React.useState(() => {
+    const width = window.innerWidth;
+    if (width <= 768) return "/assets/images/banner/habnner-mobile.png";
+    if (width <= 1024) return "/assets/images/banner/hbanner-tab.png";
+    return "/assets/images/banner/hbanner5.png";
+  });
 
   React.useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768);
+      const width = window.innerWidth;
+      if (width <= 768) setBannerImage("/assets/images/banner/habnner-mobile.png");
+      else if (width <= 1024) setBannerImage("/assets/images/banner/hbanner-tab.png");
+      else setBannerImage("/assets/images/banner/hbanner5.png");
     };
 
     window.addEventListener('resize', handleResize);
@@ -19,7 +27,7 @@ const HeroSection = () => {
   return (
     <section className="farsight-fullbg-hero">
       <img
-        src={isMobile ? "/assets/images/banner/habnner-mobile.png" : "/assets/images/banner/hbanner5.png"}
+        src={bannerImage}
         alt="Farsight Hero Banner"
         className="hero-background-image"
       />

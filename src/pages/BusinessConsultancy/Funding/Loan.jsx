@@ -431,7 +431,7 @@ export default function Loan() {
           </p>
           <div className="d-flex gap-3 justify-content-center">
             <Link to="/contact-us" className="btn btn-custom btn-white">Get Appointment</Link>
-            <button className="btn btn-custom btn-outline-white">📞 Call: +91 6200331997</button>
+            <button className="btn btn-custom btn-outline-white">📞 Call: +91 9821605930</button>
           </div>
         </div>
       </section>

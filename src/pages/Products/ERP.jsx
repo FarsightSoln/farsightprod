@@ -615,7 +615,7 @@ const ERP = () => {
               </Button>
             </div>
             <p className="erp-cta-note mt-4">
-              📞 Call us at +91-6200331997 | ✉️ info@farsight.co.in
+              📞 Call us at +91-9821605930 | ✉️ info@farsight.co.in
             </p>
           </div>
         </Container>

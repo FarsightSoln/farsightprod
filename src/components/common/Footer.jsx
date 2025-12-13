@@ -98,7 +98,7 @@ const Footer = () => {
 
       <div className="contact-item">
         <i className="fas fa-phone-alt contact-icon"></i>
-        <a href="tel:+91 6200331997">+91 6200331997</a>
+        <a href="tel:+91 9821605930">+91 9821605930</a>
       </div>
     </div>
 

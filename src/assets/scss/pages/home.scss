@@ -2,7 +2,7 @@
   width: 100%;
   height: 500px;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .hero-background-image {
@@ -12,7 +12,19 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
   z-index: 0;
+}
+
+@media (max-width: 768px) {
+  .farsight-fullbg-hero {
+    height: auto;
+    min-height: 400px;
+  }
+  .hero-background-image {
+    position: relative;
+    height: auto;
+  }
 }
 
 .farsight-hero-overlay {
@@ -28,6 +40,15 @@
   display: flex;
   align-items: flex-end;
   justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .farsight-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-bottom: 60px; /* give the button room above the bottom */
+  }
 }
 
 .farsight-hero-row {
@@ -98,40 +119,50 @@
     margin-bottom: 30px;
   }
   .btn-skew {
-    padding: 9px 24px;
+    padding: 12px 28px;
   }
   .btn-skew__text {
-    font-size: 14px;
+    font-size: 16px;
+    font-weight: 700;
   }
 }
 
 @media (max-width: 576px) {
   .farsight-fullbg-hero {
-    height: 370px;
+    height: auto;
+    min-height: 350px;
   }
   .farsight-hero-buttons {
-    margin-bottom: 25px;
+    margin-bottom: 4px;
   }
   .btn-skew {
-    padding: 8px 20px;
+    padding: 12px 24px;
   }
   .btn-skew__text {
-    font-size: 13px;
+    font-size: 15px;
+    font-weight: 700;
   }
 }
 
 @media (max-width: 400px) {
   .farsight-fullbg-hero {
-    height: 120px;
+    height: auto;
+    min-height: 320px;
   }
   .btn-skew {
-            padding: 1px 10px !important;
-        margin-bottom: -25px !important;
+    padding: 10px 20px !important;
+    margin-bottom: -15px !important;
   }
   .btn-skew__text {
-    font-size: 12px;
+    font-size: 14px;
+    font-weight: 700;
+  }
+  .farsight-hero-overlay {
+    padding-bottom: 52px; /* slightly smaller padding for very small screens */
   }
 }
+
+
 
 
 

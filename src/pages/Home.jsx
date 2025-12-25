@@ -4,10 +4,12 @@ import HeroSection from '../components/home/HeroSection';
 import InfiniteSliderSection from '../components/home/InfiniteSliderSection';
 import AboutSection from '../components/home/AboutSection';
 import OurSolutionsSection from '../components/home/OurSolutionsSection';
+import OurSuccess from '../components/home/OurSuccess';
 import EmpoweringStartupsSection from '../components/home/EmpoweringStartupsSection';
 import CertificationsSection from '../components/home/CertificationsSection';
+import OurPartners from '../components/home/OurPartners';
 // import WorkProcessSection from '../components/home/WorkProcessSection';
-// import Testimonials from '../components/home/Testimonials';
+//import Testimonials from '../components/home/Testimonials';
 import JoinOurTeamSection from '../components/home/JoinOurTeamSection';
 import '../assets/scss/pages/home.scss';
 
@@ -17,11 +19,13 @@ const Home = () => {
       <HeroSection />
       <AboutSection />
       <OurSolutionsSection />
+      <OurSuccess />
       <CertificationsSection />
       <EmpoweringStartupsSection />
       <InfiniteSliderSection />
       {/* <WorkProcessSection /> */}
       {/* <Testimonials /> */}
+      <OurPartners />
       <JoinOurTeamSection />
     </div>
   );

@@ -78,7 +78,7 @@ const InfiniteSliderSection = () => {
   return (
     <section className="farsight-slider-section">
       <div className="farsight-slider-heading">
-        <h2>Our Comprehensive Services</h2>
+        <h2 className="text-warning">Our Comprehensive Services</h2>
         <p>Explore a complete range of business and IT solutions crafted for your success.</p>
       </div>
 

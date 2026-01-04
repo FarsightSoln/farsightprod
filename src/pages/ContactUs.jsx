@@ -173,58 +173,148 @@ export default function ContactUs() {
   }
 
   /* ================= UI ================= */
-  return (
-    <div className="container-fluid min-vh-100 d-flex align-items-center justify-content-center bg-light py-4">
-      <div className="w-100" style={{ maxWidth: '1200px' }}>
-        <div className="bg-white rounded-4 shadow-lg overflow-hidden">
-          <div className="row g-0">
-            <div
-              className="col-lg-6 d-none d-lg-flex"
-              style={{
-                background: 'url(/assets/images/banner/contact-banner.png) center/cover no-repeat'
-              }}
-            />
+return (
+  <div className="container-fluid min-vh-100 d-flex align-items-center justify-content-center bg-light py-4">
+    <div className="w-100" style={{ maxWidth: '1100px' }}>
+      <div className="bg-white rounded-4 shadow-lg overflow-hidden">
+        <div className="row g-0">
 
-            <div className="col-12 col-lg-6 p-4 p-lg-5">
-              <form onSubmit={handleSubmit} className="d-grid gap-4">
+          {/* LEFT IMAGE (DESKTOP ONLY) */}
+          <div
+            className="col-lg-6 d-none d-lg-block"
+            style={{
+              background: 'url(/assets/images/banner/contact-banner.png) center/cover no-repeat'
+            }}
+          />
 
-                {error && <div className="alert alert-danger"><small>{error}</small></div>}
-                {success && <div className="alert alert-success"><small>{success}</small></div>}
+          {/* FORM */}
+          <div className="col-12 col-lg-6 p-4 p-lg-5">
+            <form onSubmit={handleSubmit} className="d-flex flex-column gap-3">
 
-                <input className="form-control" placeholder="Full Name" name="name" value={formData.name} onChange={handleInputChange} />
-                <input className="form-control" placeholder="Company (Optional)" name="company" value={formData.company} onChange={handleInputChange} />
-                <input className="form-control" placeholder="Email" name="email" value={formData.email} onChange={handleInputChange} />
+              {error && (
+                <div className="alert alert-danger py-2 mb-0">
+                  <small>{error}</small>
+                </div>
+              )}
 
-                <div className="d-flex gap-2">
-                  <input className="form-control" placeholder="Mobile Number" name="mobile" value={formData.mobile} onChange={handleInputChange} disabled={otpVerified} />
-                  {!otpVerified && (
-                    <button type="button" className="btn btn-primary" onClick={sendOTP} disabled={loading || otpSent}>
-                      {otpSent ? 'Sent' : 'Send OTP'}
-                    </button>
-                  )}
+              {success && (
+                <div className="alert alert-success py-2 mb-0">
+                  <small>{success}</small>
+                </div>
+              )}
+
+              <input
+                className="form-control"
+                placeholder="Full Name"
+                name="name"
+                value={formData.name}
+                onChange={handleInputChange}
+              />
+
+              <input
+                className="form-control"
+                placeholder="Company (Optional)"
+                name="company"
+                value={formData.company}
+                onChange={handleInputChange}
+              />
+
+              <input
+                className="form-control"
+                placeholder="Email"
+                name="email"
+                value={formData.email}
+                onChange={handleInputChange}
+              />
+
+              {/* MOBILE + OTP */}
+              <div className="row g-2">
+                <div className="col-12 col-md-8">
+                  <input
+                    className="form-control"
+                    placeholder="Mobile Number"
+                    name="mobile"
+                    value={formData.mobile}
+                    onChange={handleInputChange}
+                    disabled={otpVerified}
+                  />
                 </div>
 
-                {otpSent && !otpVerified && (
-                  <>
-                    <input className="form-control" placeholder="Enter OTP" value={otp} onChange={(e) => setOtp(e.target.value.replace(/\D/g, '').slice(0, 6))} />
-                    <button type="button" className="btn btn-success" onClick={verifyOTP} disabled={loading}>Verify OTP</button>
-                    <button type="button" className="btn btn-link" onClick={() => { setOtpSent(false); setOtp(''); setOtpAttempts(0); sendOTP() }}>
+                {!otpVerified && (
+                  <div className="col-12 col-md-4 d-grid">
+                    <button
+                      type="button"
+                      className="btn btn-primary"
+                      onClick={sendOTP}
+                      disabled={loading || otpSent}
+                    >
+                      {otpSent ? 'OTP Sent' : 'Send OTP'}
+                    </button>
+                  </div>
+                )}
+              </div>
+
+              {/* OTP SECTION */}
+              {otpSent && !otpVerified && (
+                <>
+                  <input
+                    className="form-control"
+                    placeholder="Enter 6-digit OTP"
+                    value={otp}
+                    onChange={(e) =>
+                      setOtp(e.target.value.replace(/\D/g, '').slice(0, 6))
+                    }
+                  />
+
+                  <div className="d-grid gap-2 d-md-flex">
+                    <button
+                      type="button"
+                      className="btn btn-success w-100"
+                      onClick={verifyOTP}
+                      disabled={loading}
+                    >
+                      Verify OTP
+                    </button>
+
+                    <button
+                      type="button"
+                      className="btn btn-outline-secondary w-100"
+                      onClick={() => {
+                        setOtpSent(false)
+                        setOtp('')
+                        setOtpAttempts(0)
+                        sendOTP()
+                      }}
+                    >
                       Resend OTP
                     </button>
-                  </>
-                )}
+                  </div>
+                </>
+              )}
 
-                <textarea className="form-control" placeholder="Message (Optional)" name="message" value={formData.message} onChange={handleInputChange} />
+              <textarea
+                className="form-control"
+                rows="4"
+                placeholder="Message (Optional)"
+                name="message"
+                value={formData.message}
+                onChange={handleInputChange}
+              />
 
-                <button type="submit" className="btn btn-primary" disabled={!otpVerified || loading}>
-                  Submit
-                </button>
+              <button
+                type="submit"
+                className="btn btn-primary py-2"
+                disabled={!otpVerified || loading}
+              >
+                {loading ? 'Submitting...' : 'Submit'}
+              </button>
 
-              </form>
-            </div>
+            </form>
           </div>
         </div>
       </div>
     </div>
-  )
+  </div>
+)
+
 }

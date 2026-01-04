@@ -19,7 +19,7 @@ export default function ContactUs() {
   const [error, setError] = useState('')
   const [success, setSuccess] = useState('')
 
-  const API_KEY = 'ee1a0f74-b284-11f0-bdde-0200cd936042'
+  const API_KEY = '517564ae-e928-11f0-a6b2-0200cd936042'
   
   // EmailJS Configuration
   const EMAILJS_SERVICE_ID = 'service_fufd8ef' // Replace with your EmailJS service ID
@@ -65,7 +65,7 @@ export default function ContactUs() {
         setOtpSent(true)
         setSuccess('OTP sent successfully via SMS to your mobile number!')
       } else {
-        setError(data.Details || 'Failed to send OTP. Please try again.')
+        setError('OTP service is temporarily unavailable. Please try again Later.')
       }
     } catch (err) {
       setError('Network error. Please check your connection and try again.')
